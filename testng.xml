@@ -2,62 +2,80 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
 
-    <test name="Check login with mail">
-        <classes>
-            <class name="Chull.TestCase">
-                <methods>
-                    <include name="loginWithMailTest" />
-                </methods>
-            </class>
-        </classes>
-    </test>
+	<test name="Check login with mail">
+		<classes>
+			<class name="Chull.TestCase">
+				<methods>
+					<include name="loginWithMailTest" />
+				</methods>
+			</class>
+		</classes>
+	</test>
 	<test name="Wrong OTP Login">
-        <classes>
-            <class name="Chull.TestCase">
-                <methods>
-                    <include name="loginWithPhoneNumber" />
-                </methods>
-            </class>
-        </classes>
-    </test>
+		<classes>
+			<class name="Chull.TestCase">
+				<methods>
+					<include name="loginWithPhoneNumber" />
+				</methods>
+			</class>
+		</classes>
+	</test>
 
-    <test name="Verify the url">
-        <classes>
-            <class name="Chull.TestCase">
-                <methods>
-                    <include name="verifyCurrentUrlTest" />
-                </methods>
-            </class>
-        </classes>
-    </test>
+	<test name="Verify the url">
+		<classes>
+			<class name="Chull.TestCase">
+				<methods>
+					<include name="verifyCurrentUrlTest" />
+				</methods>
+			</class>
+		</classes>
+	</test>
 
-    <test name="Check profile is updated">
-        <classes>
-            <class name="Chull.TestCase">
-                <methods>
-                    <include name="updateProfileTest" />
-                </methods>
-            </class>
-        </classes>
-    </test>
-      <test name="Check search box is currently working fine or not">
-        <classes>
-            <class name="Chull.TestCase">
-                <methods>
-                    <include name="searchVideoTest" />
-                </methods>
-            </class>
-        </classes>
-    </test>
-      <test name="Check if user enter wrong otp so it will login or not">
-        <classes>
-            <class name="Chull.TestCase">
-                <methods>
-                    <include name="wrongOtpLoginTest" />
-                </methods>
-            </class>
-        </classes>
-    </test>
+	<test name="Check profile is updated">
+		<classes>
+			<class name="Chull.TestCase">
+				<methods>
+					<include name="updateProfileTest" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Check search box is currently working fine or not">
+		<classes>
+			<class name="Chull.TestCase">
+				<methods>
+					<include name="searchVideoTest" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Check if user enter wrong otp so it will login or not">
+		<classes>
+			<class name="Chull.TestCase">
+				<methods>
+					<include name="wrongOtpLoginTest" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Play Video">
+		<classes>
+			<class name="Chull.TestCase">
+				<methods>
+					<include name="playVideoTest" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Check Footer button workable or Not">
+		<classes>
+			<class name="Chull.TestCase">
+				<methods>
+					<include name="footerTermsAndConditionsTest" />
+				</methods>
+			</class>
+		</classes>
+	</test>
 
 
 </suite>
