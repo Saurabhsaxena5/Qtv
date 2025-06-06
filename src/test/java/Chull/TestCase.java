@@ -1,6 +1,7 @@
 package Chull;
 
 import java.time.Duration;
+import java.util.List;
 import java.util.Set;
 
 import org.openqa.selenium.*;
@@ -78,7 +79,6 @@ public class TestCase {
 		Thread.sleep(2000);
 		clickOnSendOtp.click();
 		Thread.sleep(4000);
-		
 
 		driver.findElement(By.xpath("//a[@href='/Profile']")).click();
 
@@ -117,7 +117,7 @@ public class TestCase {
 	// Test Case 6: Search video
 	@Test
 	public void searchVideoTest() throws InterruptedException {
-		
+
 		driver.findElement(By.xpath("//a[@href=\"/login\"]")).click();
 		Thread.sleep(2000);
 
@@ -132,7 +132,7 @@ public class TestCase {
 		Thread.sleep(2000);
 		clickOnSendOtp.click();
 		Thread.sleep(4000);
-		
+
 		driver.findElement(By.xpath("//a[@href='/search']")).click();
 		Thread.sleep(3000);
 		WebElement searchBox = driver.findElement(By.xpath("//input[@type='text']"));
@@ -168,82 +168,152 @@ public class TestCase {
 	}
 
 	// Test Case 8: Play video
-	
-	 @Test
-	    public void playVideoTest() throws InterruptedException {
-	        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 
-	        // Click Login
-	        driver.findElement(By.xpath("//a[@href='/login']")).click();
+	@Test
+	public void playVideoTest() throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 
-	        // Enter Phone
-	        WebElement enterPhone = wait.until(ExpectedConditions.elementToBeClickable(
-	                By.xpath("//input[@placeholder='Mobile Number']")));
-	        enterPhone.sendKeys("8920689888");
+		// Click Login
+		driver.findElement(By.xpath("//a[@href='/login']")).click();
 
-	        // Send OTP
-	        driver.findElement(By.xpath("//button[normalize-space()='Send OTP']")).click();
+		// Enter Phone
+		WebElement enterPhone = wait
+				.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@placeholder='Mobile Number']")));
+		enterPhone.sendKeys("8920689888");
 
-	        // Enter OTP
-	        WebElement otpBox = wait.until(ExpectedConditions.visibilityOfElementLocated(
-	                By.xpath("//input[@name='otp']")));
-	        otpBox.sendKeys("1234");
+		// Send OTP
+		driver.findElement(By.xpath("//button[normalize-space()='Send OTP']")).click();
 
+		// Enter OTP
+		WebElement otpBox = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@name='otp']")));
+		otpBox.sendKeys("1234");
 
-	        // Click Verify OTP
-	        WebElement verifyOtp = wait.until(ExpectedConditions.elementToBeClickable(
-	                By.xpath("//button[normalize-space()='Verify OTP']")));
-	        verifyOtp.click();
-	       
+		// Click Verify OTP
+		WebElement verifyOtp = wait
+				.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='Verify OTP']")));
+		verifyOtp.click();
 
-	        // Search Video
-	        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@href='/search']"))).click();
-	        WebElement searchBox = wait.until(ExpectedConditions.visibilityOfElementLocated(
-	                By.xpath("//input[@type='text']")));
-	        searchBox.sendKeys("Love kills", Keys.ENTER);
+		// Search Video
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@href='/search']"))).click();
+		WebElement searchBox = wait
+				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@type='text']")));
+		searchBox.sendKeys("Love kills", Keys.ENTER);
 
-	        // Click on video
-	        WebElement videoThumb = wait.until(ExpectedConditions.elementToBeClickable(
-	                By.xpath("//img[@alt='Love kills']")));
-	        videoThumb.click();
+		// Click on video
+		WebElement videoThumb = wait
+				.until(ExpectedConditions.elementToBeClickable(By.xpath("//img[@alt='Love kills']")));
+		videoThumb.click();
 
-	        // Click watch video button
-	        WebElement watchVideo = wait.until(ExpectedConditions.elementToBeClickable(
-	                By.xpath("//button[contains(@class, 'sc-fUnMCh')]")));
-	        watchVideo.click();
-	        Thread.sleep(10000);
+		// Click watch video button
+		WebElement watchVideo = wait
+				.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[contains(@class, 'sc-fUnMCh')]")));
+		watchVideo.click();
+		Thread.sleep(10000);
 
-	        // Dismiss popup if any
-	        try {
-	            WebElement popup = wait.until(ExpectedConditions.elementToBeClickable(
-	                    By.xpath("//button[@class='cancelbtn']")));
-	            popup.click();
-	        } catch (TimeoutException ignored) {}
+		// Dismiss popup if any
+		try {
+			WebElement popup = wait
+					.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@class='cancelbtn']")));
+			popup.click();
+		} catch (TimeoutException ignored) {
+		}
 
-	        // Switch to iframe
-	        WebElement iframe = wait.until(ExpectedConditions.presenceOfElementLocated(
-	                By.xpath("//iframe[contains(@src, 'player')]")));
-	        driver.switchTo().frame(iframe);
-	        
-	        
+		// Switch to iframe
+		WebElement iframe = wait
+				.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//iframe[contains(@src, 'player')]")));
+		driver.switchTo().frame(iframe);
 
-	        // Attempt to play video using JS in case of autoplay restriction
-	        try {
-	            WebElement video = wait.until(ExpectedConditions.presenceOfElementLocated(By.tagName("video")));
-	            ((JavascriptExecutor) driver).executeScript("arguments[0].play()", video);
-	        } catch (Exception e) {
-	            System.out.println("Failed to start video: " + e.getMessage());
-	        }
-	    }
+		// Attempt to play video using JS in case of autoplay restriction
+		try {
+			WebElement video = wait.until(ExpectedConditions.presenceOfElementLocated(By.tagName("video")));
+			((JavascriptExecutor) driver).executeScript("arguments[0].play()", video);
+		} catch (Exception e) {
+			System.out.println("Failed to start video: " + e.getMessage());
+		}
+	}
+
 	// Test Case 9: Click footer links
 	@Test
-	public void footerTermsAndConditionsTest() {
+	public void footerTermsAndConditionsTest() throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+
+		// Login Flow
+		driver.findElement(By.xpath("//a[@href='/login']")).click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@placeholder='Mobile Number']")))
+				.sendKeys("8920689888");
+
+		driver.findElement(By.xpath("//button[normalize-space()='Send OTP']")).click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@name='otp']"))).sendKeys("1234");
+
+		WebElement clickOnSendOtp = wait
+				.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='Verify OTP']")));
+		clickOnSendOtp.click();
+
+		// Wait until page is loaded
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.tagName("footer")));
+
+		// Scroll to bottom
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+		js.executeScript("window.scrollTo(0, document.body.scrollHeight);");
+
+		// Wait for terms link to be visible and clickable
 		WebElement termsLink = wait.until(
 				ExpectedConditions.elementToBeClickable(By.xpath("//span[normalize-space()='Terms and Conditions']")));
+		js.executeScript("arguments[0].scrollIntoView(true);", termsLink);
 		termsLink.click();
-		Assert.assertTrue(termsLink.isDisplayed(), "Terms and Conditions link not working");
+
+		// Wait a bit to ensure iframe or new tab is loaded
+		Thread.sleep(2000); // Optional: use explicit wait if there's a proper condition
+
+		// ==== DEBUGGING: Print all iframe IDs ====
+		List<WebElement> iframes = driver.findElements(By.tagName("iframe"));
+		System.out.println("Total iframes: " + iframes.size());
+		for (WebElement iframe : iframes) {
+			System.out.println("iframe ID: " + iframe.getAttribute("id"));
+			System.out.println("iframe SRC: " + iframe.getAttribute("src"));
+		}
+
+		// Try switching to first available iframe as fallback
+		if (!iframes.isEmpty()) {
+			driver.switchTo().frame(iframes.get(0)); // You can refine this by matching ID/src if needed
+
+			// Now interact inside the frame
+			WebElement termsHeader = wait
+					.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@id='container']")));
+			if (termsHeader.isDisplayed()) {
+				System.out.println("Element is visible");
+			} else {
+				System.out.println("Data Not Displayed");
+			}
+
+			// Switch back to default content after checking
+			driver.switchTo().defaultContent();
+		} else {
+			System.out.println("❌ No iframe found. Terms and Conditions might be in a new tab.");
+
+			// Optional: handle new window/tab
+			String originalWindow = driver.getWindowHandle();
+			Set<String> allWindows = driver.getWindowHandles();
+			for (String window : allWindows) {
+				if (!window.equals(originalWindow)) {
+					driver.switchTo().window(window);
+					break;
+				}
+			}
+
+			// Now try to find the element in new tab
+			WebElement termsHeader = wait
+					.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@id='container']")));
+			if (termsHeader.isDisplayed()) {
+				System.out.println("✅ Element visible in new tab.");
+			} else {
+				System.out.println("❌ Data Not Displayed in new tab.");
+			}
+
+			// Optional: close the new tab and return to original
+			driver.close();
+			driver.switchTo().window(originalWindow);
+		}
 	}
 
 	// Test Case 10: Without login detailed page navigation
@@ -278,12 +348,28 @@ public class TestCase {
 
 	// Test Case 12: Logout
 	@Test
-	public void logoutTest() {
+	public void logoutTest() throws InterruptedException {
+		driver.findElement(By.xpath("//a[@href=\"/login\"]")).click();
+		Thread.sleep(2000);
 
-		driver.findElement(By.xpath("//div[@class='Navbar']//div[3]//img[1]")).click();
-		driver.findElement(By.xpath("//div[@class='dropdown-menu show']//div")).click();
-		driver.findElement(By.xpath("//button[@class='removebtn']")).click();
-		// Assert user redirected to login page or not
+		WebElement enterphoneNumber = driver.findElement(By.xpath("//input[@placeholder=\"Mobile Number\"]"));
+		enterphoneNumber.sendKeys("8920689888");
+
+		driver.findElement(By.xpath("//button[normalize-space(.)='Send OTP']")).click();
+
+		driver.findElement(By.xpath("//input[@name=\"otp\"]")).sendKeys("1234");
+		Thread.sleep(4000);
+		WebElement clickOnSendOtp = driver.findElement(By.xpath("//button[normalize-space(.)='Verify OTP']"));
+		Thread.sleep(2000);
+		clickOnSendOtp.click();
+
+		//driver.findElement(By.xpath("(//img[@class='Movieslogo'])[8]")).click();
+		WebElement Clickonlogout = wait
+				.until(ExpectedConditions.elementToBeClickable(By.xpath("(//img[@class='Movieslogo'])[8]")));
+		Clickonlogout.click();
+		
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@class='removebtn']"))).click();
+		
 	}
 
 	// Test Case 13: Buy or rent video
