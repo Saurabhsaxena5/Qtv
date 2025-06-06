@@ -5,9 +5,9 @@
     <classes>
       <class name="Chull.TestCase">
         <methods>
+          <include name="playVideoTest"/>
           <include name="teardown"/>
           <include name="setup"/>
-          <include name="logoutTest"/>
         </methods>
       </class> <!-- Chull.TestCase -->
     </classes>

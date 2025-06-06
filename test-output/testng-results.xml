@@ -2,20 +2,20 @@
 <testng-results ignored="15" total="16" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-06-06T12:49:36 IST" name="Default suite" finished-at="2025-06-06T12:50:00 IST" duration-ms="24200">
+  <suite started-at="2025-06-06T18:35:55 IST" name="Default suite" finished-at="2025-06-06T18:36:16 IST" duration-ms="21041">
     <groups>
     </groups>
-    <test started-at="2025-06-06T12:49:36 IST" name="Default test" finished-at="2025-06-06T12:50:00 IST" duration-ms="24200">
+    <test started-at="2025-06-06T18:35:55 IST" name="Default test" finished-at="2025-06-06T18:36:16 IST" duration-ms="21041">
       <class name="Chull.TestCase">
-        <test-method is-config="true" signature="setup()[pri:0, instance:Chull.TestCase@7b36aa0c]" started-at="2025-06-06T12:49:36 IST" name="setup" finished-at="2025-06-06T12:49:49 IST" duration-ms="12547" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:Chull.TestCase@7b36aa0c]" started-at="2025-06-06T18:35:55 IST" name="setup" finished-at="2025-06-06T18:36:00 IST" duration-ms="5683" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="logoutTest()[pri:0, instance:Chull.TestCase@7b36aa0c]" started-at="2025-06-06T12:49:49 IST" name="logoutTest" finished-at="2025-06-06T12:50:00 IST" duration-ms="11160" status="PASS">
+        <test-method signature="playVideoTest()[pri:0, instance:Chull.TestCase@7b36aa0c]" started-at="2025-06-06T18:36:00 IST" name="playVideoTest" finished-at="2025-06-06T18:36:15 IST" duration-ms="14773" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- logoutTest -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:Chull.TestCase@7b36aa0c]" started-at="2025-06-06T12:50:00 IST" name="teardown" finished-at="2025-06-06T12:50:00 IST" duration-ms="438" status="PASS">
+        </test-method> <!-- playVideoTest -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:Chull.TestCase@7b36aa0c]" started-at="2025-06-06T18:36:15 IST" name="teardown" finished-at="2025-06-06T18:36:16 IST" duration-ms="533" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->

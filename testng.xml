@@ -75,6 +75,14 @@
 				</methods>
 			</class>
 		</classes>
+	</test><test name="Check Logout Button is working properly">
+		<classes>
+			<class name="Chull.TestCase">
+				<methods>
+					<include name="logoutTest" />
+				</methods>
+			</class>
+		</classes>
 	</test>
 
 
