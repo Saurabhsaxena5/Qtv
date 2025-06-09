@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 3 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-passed">Suite</span>
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,7 +92,45 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">9 methods,   9 passed</span>
+                    <span class="method-stats">9 methods, 3 failed,  1 skipped,  5 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="Chull.TestCase" class="method navigator-link" hash-for-method="loginWithMailTest">loginWithMailTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="Chull.TestCase" class="method navigator-link" hash-for-method="loginWithPhoneNumber">loginWithPhoneNumber</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="Chull.TestCase" class="method navigator-link" hash-for-method="searchVideoTest">searchVideoTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods skipped suite-Suite"> (hide)</a> <!-- hide-methods skipped suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods skipped suite-Suite"> (show)</a> <!-- show-methods skipped suite-Suite -->
+                    </span>
+                    <div class="method-list-content skipped suite-Suite">
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="Chull.TestCase" class="method navigator-link" hash-for-method="footerTermsAndConditionsTest">footerTermsAndConditionsTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,32 +141,12 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="Chull.TestCase" class="method navigator-link" hash-for-method="footerTermsAndConditionsTest">footerTermsAndConditionsTest</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="Chull.TestCase" class="method navigator-link" hash-for-method="loginWithMailTest">loginWithMailTest</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="Chull.TestCase" class="method navigator-link" hash-for-method="loginWithPhoneNumber">loginWithPhoneNumber</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="Chull.TestCase" class="method navigator-link" hash-for-method="logoutTest">logoutTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="Chull.TestCase" class="method navigator-link" hash-for-method="playVideoTest">playVideoTest</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="Chull.TestCase" class="method navigator-link" hash-for-method="searchVideoTest">searchVideoTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -158,9 +176,143 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-passed">
+          <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="failed.png"/>
+              <span class="class-name">Chull.TestCase</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginWithMailTest">
+                  </a> <!-- loginWithMailTest -->
+                  <span class="method-name">loginWithMailTest</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[normalize-space(.)=&quot;Login with Email&quot;]&quot;}
+  (Session info: chrome=137.0.7151.69)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.33.0&apos;, revision: &apos;2c6aaad03a&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [77e2ecd87cb3825a2e9490a961d528d5, findElement {value=//button[normalize-space(.)=&quot;Login with Email&quot;], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.68 (2989ffee9373..., userDataDir: C:\Users\Yash\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54273}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54273/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 77e2ecd87cb3825a2e9490a961d528d5
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
+	at Chull.TestCase.loginWithMailTest(TestCase.java:388)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 32 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginWithPhoneNumber">
+                  </a> <!-- loginWithPhoneNumber -->
+                  <span class="method-name">loginWithPhoneNumber</span>
+                  <div class="stack-trace">org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+Build info: version: &apos;4.33.0&apos;, revision: &apos;2c6aaad03a&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [a4d249484eea94afa6164b975f0197e2, findElement [value, using]]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.68 (2989ffee9373..., userDataDir: C:\Users\Yash\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54345}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54345/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a4d249484eea94afa6164b975f0197e2
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:571)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
+	at Chull.TestCase.loginWithPhoneNumber(TestCase.java:42)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+Caused by: java.io.UncheckedIOException: java.io.IOException: HTTP/1.1 header parser received no bytes
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:500)
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.lambda$executeAsync$2(JdkHttpClient.java:387)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+Caused by: java.io.IOException: HTTP/1.1 header parser received no bytes
+	at java.net.http/jdk.internal.net.http.HttpClientImpl.send(HttpClientImpl.java:971)
+	at java.net.http/jdk.internal.net.http.HttpClientFacade.send(HttpClientFacade.java:133)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:459)
+	... 8 more
+Caused by: java.io.IOException: HTTP/1.1 header parser received no bytes
+	at java.net.http/jdk.internal.net.http.common.Utils.wrapWithExtraDetail(Utils.java:440)
+	at java.net.http/jdk.internal.net.http.Http1Response$HeadersReader.onReadError(Http1Response.java:590)
+	at java.net.http/jdk.internal.net.http.Http1AsyncReceiver.checkForErrors(Http1AsyncReceiver.java:302)
+	at java.net.http/jdk.internal.net.http.Http1AsyncReceiver.flush(Http1AsyncReceiver.java:268)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler$LockingRestartableTask.run(SequentialScheduler.java:182)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler$CompleteRestartableTask.run(SequentialScheduler.java:149)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler$SchedulableTask.run(SequentialScheduler.java:207)
+	... 3 more
+Caused by: java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:403)
+	at java.base/sun.nio.ch.SocketChannelImpl.implRead(SocketChannelImpl.java:435)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:493)
+	at java.net.http/jdk.internal.net.http.SocketTube.readAvailable(SocketTube.java:1178)
+	at java.net.http/jdk.internal.net.http.SocketTube$InternalReadPublisher$InternalReadSubscription.read(SocketTube.java:841)
+	at java.net.http/jdk.internal.net.http.SocketTube$SocketFlowTask.run(SocketTube.java:181)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler$SchedulableTask.run(SequentialScheduler.java:207)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler.runOrSchedule(SequentialScheduler.java:280)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler.runOrSchedule(SequentialScheduler.java:233)
+	at java.net.http/jdk.internal.net.http.SocketTube$InternalReadPublisher$InternalReadSubscription.signalReadable(SocketTube.java:782)
+	at java.net.http/jdk.internal.net.http.SocketTube$InternalReadPublisher$ReadEvent.signalEvent(SocketTube.java:965)
+	at java.net.http/jdk.internal.net.http.SocketTube$SocketFlowEvent.handle(SocketTube.java:253)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.handleEvent(HttpClientImpl.java:1478)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.lambda$run$3(HttpClientImpl.java:1423)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.run(HttpClientImpl.java:1423)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="searchVideoTest">
+                  </a> <!-- searchVideoTest -->
+                  <span class="method-name">searchVideoTest</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[@placeholder=&quot;Mobile Number&quot;]&quot;}
+  (Session info: chrome=137.0.7151.69)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.33.0&apos;, revision: &apos;2c6aaad03a&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [04950e044e58e62722d42ae0cb98cb1f, findElement {value=//input[@placeholder=&quot;Mobile Number&quot;], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.68 (2989ffee9373..., userDataDir: C:\Users\Yash\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54616}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54616/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 04950e044e58e62722d42ae0cb98cb1f
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
+	at Chull.TestCase.searchVideoTest(TestCase.java:124)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 32 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
               <span class="class-name">Chull.TestCase</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -169,22 +321,37 @@
                   <a name="footerTermsAndConditionsTest">
                   </a> <!-- footerTermsAndConditionsTest -->
                   <span class="method-name">footerTermsAndConditionsTest</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status
+from target frame detached
+  (Session info: chrome=137.0.7151.69)
+Build info: version: &apos;4.33.0&apos;, revision: &apos;2c6aaad03a&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [e3c15fe6fe7029f5d223a24dcc22ba07, get {url=https://chull.tv/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.68 (2989ffee9373..., userDataDir: C:\Users\Yash\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54827}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54827/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e3c15fe6fe7029f5d223a24dcc22ba07
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:312)
+	at Chull.TestCase.setup(TestCase.java:26)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 36 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="loginWithMailTest">
-                  </a> <!-- loginWithMailTest -->
-                  <span class="method-name">loginWithMailTest</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="loginWithPhoneNumber">
-                  </a> <!-- loginWithPhoneNumber -->
-                  <span class="method-name">loginWithPhoneNumber</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-skipped -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">Chull.TestCase</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
                   <a name="logoutTest">
@@ -197,13 +364,6 @@
                   <a name="playVideoTest">
                   </a> <!-- playVideoTest -->
                   <span class="method-name">playVideoTest</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="searchVideoTest">
-                  </a> <!-- searchVideoTest -->
-                  <span class="method-name">searchVideoTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -383,46 +543,46 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(9);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'searchVideoTest')
+data.setCell(0, 1, 'playVideoTest')
 data.setCell(0, 2, 'Chull.TestCase')
-data.setCell(0, 3, 19875);
+data.setCell(0, 3, 72099);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'playVideoTest')
+data.setCell(1, 1, 'updateProfileTest')
 data.setCell(1, 2, 'Chull.TestCase')
-data.setCell(1, 3, 14354);
+data.setCell(1, 3, 16547);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'updateProfileTest')
+data.setCell(2, 1, 'logoutTest')
 data.setCell(2, 2, 'Chull.TestCase')
-data.setCell(2, 3, 13454);
+data.setCell(2, 3, 15866);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'logoutTest')
+data.setCell(3, 1, 'loginWithPhoneNumber')
 data.setCell(3, 2, 'Chull.TestCase')
-data.setCell(3, 3, 10495);
+data.setCell(3, 3, 15421);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'footerTermsAndConditionsTest')
+data.setCell(4, 1, 'searchVideoTest')
 data.setCell(4, 2, 'Chull.TestCase')
-data.setCell(4, 3, 10064);
+data.setCell(4, 3, 12612);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'loginWithPhoneNumber')
+data.setCell(5, 1, 'loginWithMailTest')
 data.setCell(5, 2, 'Chull.TestCase')
-data.setCell(5, 3, 8985);
+data.setCell(5, 3, 12405);
 data.setCell(6, 0, 6)
 data.setCell(6, 1, 'wrongOtpLoginTest')
 data.setCell(6, 2, 'Chull.TestCase')
-data.setCell(6, 3, 7181);
+data.setCell(6, 3, 7661);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'loginWithMailTest')
+data.setCell(7, 1, 'verifyCurrentUrlTest')
 data.setCell(7, 2, 'Chull.TestCase')
-data.setCell(7, 3, 4234);
+data.setCell(7, 3, 52);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'verifyCurrentUrlTest')
+data.setCell(8, 1, 'footerTermsAndConditionsTest')
 data.setCell(8, 2, 'Chull.TestCase')
-data.setCell(8, 3, 135);
+data.setCell(8, 3, 0);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 2 minutes</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -443,165 +603,75 @@ return data;
             <div class="ignored-class-div">
               <span class="ignored-class-name">Chull.TestCase</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">searchVideoTest</span>
-                <br/>
-                <span class="ignored-method-name">loginWithPhoneNumber</span>
-                <br/>
-                <span class="ignored-method-name">viewAllTest</span>
-                <br/>
-                <span class="ignored-method-name">playStoreButtonTest</span>
-                <br/>
-                <span class="ignored-method-name">buyRentVideoTest</span>
-                <br/>
-                <span class="ignored-method-name">subscriptionTest</span>
-                <br/>
-                <span class="ignored-method-name">buyRentVideoTest</span>
-                <br/>
-                <span class="ignored-method-name">logoutTest</span>
-                <br/>
-                <span class="ignored-method-name">buyRentVideoTest</span>
-                <br/>
-                <span class="ignored-method-name">updateProfileTest</span>
-                <br/>
-                <span class="ignored-method-name">footerTermsAndConditionsTest</span>
-                <br/>
                 <span class="ignored-method-name">filterValuesTest</span>
                 <br/>
-                <span class="ignored-method-name">playVideoTest</span>
+                <span class="ignored-method-name">detailedPageWithoutLoginTest</span>
                 <br/>
                 <span class="ignored-method-name">updateProfileTest</span>
-                <br/>
-                <span class="ignored-method-name">buyRentVideoTest</span>
-                <br/>
-                <span class="ignored-method-name">loginWithMailTest</span>
-                <br/>
-                <span class="ignored-method-name">loginWithPhoneNumber</span>
-                <br/>
-                <span class="ignored-method-name">updateProfileTest</span>
-                <br/>
-                <span class="ignored-method-name">searchVideoTest</span>
-                <br/>
-                <span class="ignored-method-name">playStoreButtonTest</span>
-                <br/>
-                <span class="ignored-method-name">verifyCurrentUrlTest</span>
-                <br/>
-                <span class="ignored-method-name">subscriptionTest</span>
                 <br/>
                 <span class="ignored-method-name">updateProfileTest</span>
                 <br/>
                 <span class="ignored-method-name">detailedPageWithoutLoginTest</span>
                 <br/>
-                <span class="ignored-method-name">loginWithPhoneNumber</span>
-                <br/>
-                <span class="ignored-method-name">detailedPageWithoutLoginTest</span>
-                <br/>
-                <span class="ignored-method-name">viewAllTest</span>
-                <br/>
-                <span class="ignored-method-name">verifyCurrentUrlTest</span>
-                <br/>
-                <span class="ignored-method-name">updateProfileTest</span>
-                <br/>
-                <span class="ignored-method-name">detailedPageWithoutLoginTest</span>
-                <br/>
-                <span class="ignored-method-name">verifyCurrentUrlTest</span>
-                <br/>
-                <span class="ignored-method-name">filterButtonClickTest</span>
-                <br/>
-                <span class="ignored-method-name">playStoreButtonTest</span>
-                <br/>
-                <span class="ignored-method-name">loginWithPhoneNumber</span>
-                <br/>
-                <span class="ignored-method-name">playVideoTest</span>
-                <br/>
-                <span class="ignored-method-name">detailedPageWithoutLoginTest</span>
-                <br/>
-                <span class="ignored-method-name">subscriptionTest</span>
-                <br/>
-                <span class="ignored-method-name">logoutTest</span>
-                <br/>
-                <span class="ignored-method-name">playStoreButtonTest</span>
-                <br/>
-                <span class="ignored-method-name">updateProfileTest</span>
-                <br/>
-                <span class="ignored-method-name">playVideoTest</span>
-                <br/>
                 <span class="ignored-method-name">buyRentVideoTest</span>
-                <br/>
-                <span class="ignored-method-name">searchVideoTest</span>
-                <br/>
-                <span class="ignored-method-name">subscriptionTest</span>
-                <br/>
-                <span class="ignored-method-name">filterButtonClickTest</span>
-                <br/>
-                <span class="ignored-method-name">filterButtonClickTest</span>
-                <br/>
-                <span class="ignored-method-name">detailedPageWithoutLoginTest</span>
-                <br/>
-                <span class="ignored-method-name">filterValuesTest</span>
-                <br/>
-                <span class="ignored-method-name">footerTermsAndConditionsTest</span>
-                <br/>
-                <span class="ignored-method-name">searchVideoTest</span>
-                <br/>
-                <span class="ignored-method-name">verifyCurrentUrlTest</span>
-                <br/>
-                <span class="ignored-method-name">loginWithMailTest</span>
-                <br/>
-                <span class="ignored-method-name">wrongOtpLoginTest</span>
-                <br/>
-                <span class="ignored-method-name">playVideoTest</span>
-                <br/>
-                <span class="ignored-method-name">viewAllTest</span>
-                <br/>
-                <span class="ignored-method-name">logoutTest</span>
-                <br/>
-                <span class="ignored-method-name">logoutTest</span>
-                <br/>
-                <span class="ignored-method-name">viewAllTest</span>
-                <br/>
-                <span class="ignored-method-name">logoutTest</span>
-                <br/>
-                <span class="ignored-method-name">filterValuesTest</span>
-                <br/>
-                <span class="ignored-method-name">detailedPageWithoutLoginTest</span>
-                <br/>
-                <span class="ignored-method-name">filterButtonClickTest</span>
-                <br/>
-                <span class="ignored-method-name">wrongOtpLoginTest</span>
-                <br/>
-                <span class="ignored-method-name">verifyCurrentUrlTest</span>
-                <br/>
-                <span class="ignored-method-name">buyRentVideoTest</span>
-                <br/>
-                <span class="ignored-method-name">subscriptionTest</span>
-                <br/>
-                <span class="ignored-method-name">playStoreButtonTest</span>
-                <br/>
-                <span class="ignored-method-name">filterValuesTest</span>
-                <br/>
-                <span class="ignored-method-name">filterValuesTest</span>
-                <br/>
-                <span class="ignored-method-name">footerTermsAndConditionsTest</span>
-                <br/>
-                <span class="ignored-method-name">detailedPageWithoutLoginTest</span>
-                <br/>
-                <span class="ignored-method-name">subscriptionTest</span>
-                <br/>
-                <span class="ignored-method-name">filterValuesTest</span>
-                <br/>
-                <span class="ignored-method-name">filterButtonClickTest</span>
-                <br/>
-                <span class="ignored-method-name">searchVideoTest</span>
-                <br/>
-                <span class="ignored-method-name">filterValuesTest</span>
-                <br/>
-                <span class="ignored-method-name">wrongOtpLoginTest</span>
-                <br/>
-                <span class="ignored-method-name">filterValuesTest</span>
                 <br/>
                 <span class="ignored-method-name">playVideoTest</span>
                 <br/>
                 <span class="ignored-method-name">loginWithMailTest</span>
+                <br/>
+                <span class="ignored-method-name">verifyCurrentUrlTest</span>
+                <br/>
+                <span class="ignored-method-name">playStoreButtonTest</span>
+                <br/>
+                <span class="ignored-method-name">loginWithPhoneNumber</span>
+                <br/>
+                <span class="ignored-method-name">searchVideoTest</span>
+                <br/>
+                <span class="ignored-method-name">verifyCurrentUrlTest</span>
+                <br/>
+                <span class="ignored-method-name">loginWithPhoneNumber</span>
+                <br/>
+                <span class="ignored-method-name">filterValuesTest</span>
+                <br/>
+                <span class="ignored-method-name">buyRentVideoTest</span>
+                <br/>
+                <span class="ignored-method-name">viewAllTest</span>
+                <br/>
+                <span class="ignored-method-name">buyRentVideoTest</span>
+                <br/>
+                <span class="ignored-method-name">searchVideoTest</span>
+                <br/>
+                <span class="ignored-method-name">wrongOtpLoginTest</span>
+                <br/>
+                <span class="ignored-method-name">subscriptionTest</span>
+                <br/>
+                <span class="ignored-method-name">logoutTest</span>
+                <br/>
+                <span class="ignored-method-name">loginWithPhoneNumber</span>
+                <br/>
+                <span class="ignored-method-name">detailedPageWithoutLoginTest</span>
+                <br/>
+                <span class="ignored-method-name">detailedPageWithoutLoginTest</span>
+                <br/>
+                <span class="ignored-method-name">updateProfileTest</span>
+                <br/>
+                <span class="ignored-method-name">filterButtonClickTest</span>
+                <br/>
+                <span class="ignored-method-name">footerTermsAndConditionsTest</span>
+                <br/>
+                <span class="ignored-method-name">buyRentVideoTest</span>
+                <br/>
+                <span class="ignored-method-name">playStoreButtonTest</span>
+                <br/>
+                <span class="ignored-method-name">loginWithPhoneNumber</span>
+                <br/>
+                <span class="ignored-method-name">filterButtonClickTest</span>
+                <br/>
+                <span class="ignored-method-name">filterButtonClickTest</span>
+                <br/>
+                <span class="ignored-method-name">playStoreButtonTest</span>
+                <br/>
+                <span class="ignored-method-name">playVideoTest</span>
                 <br/>
                 <span class="ignored-method-name">wrongOtpLoginTest</span>
                 <br/>
@@ -609,109 +679,199 @@ return data;
                 <br/>
                 <span class="ignored-method-name">footerTermsAndConditionsTest</span>
                 <br/>
+                <span class="ignored-method-name">viewAllTest</span>
+                <br/>
+                <span class="ignored-method-name">loginWithPhoneNumber</span>
+                <br/>
+                <span class="ignored-method-name">footerTermsAndConditionsTest</span>
+                <br/>
+                <span class="ignored-method-name">wrongOtpLoginTest</span>
+                <br/>
                 <span class="ignored-method-name">filterValuesTest</span>
                 <br/>
-                <span class="ignored-method-name">subscriptionTest</span>
-                <br/>
-                <span class="ignored-method-name">buyRentVideoTest</span>
-                <br/>
                 <span class="ignored-method-name">viewAllTest</span>
+                <br/>
+                <span class="ignored-method-name">logoutTest</span>
+                <br/>
+                <span class="ignored-method-name">searchVideoTest</span>
+                <br/>
+                <span class="ignored-method-name">loginWithPhoneNumber</span>
+                <br/>
+                <span class="ignored-method-name">footerTermsAndConditionsTest</span>
+                <br/>
+                <span class="ignored-method-name">footerTermsAndConditionsTest</span>
+                <br/>
+                <span class="ignored-method-name">loginWithMailTest</span>
                 <br/>
                 <span class="ignored-method-name">wrongOtpLoginTest</span>
                 <br/>
+                <span class="ignored-method-name">wrongOtpLoginTest</span>
+                <br/>
+                <span class="ignored-method-name">searchVideoTest</span>
+                <br/>
+                <span class="ignored-method-name">filterButtonClickTest</span>
+                <br/>
+                <span class="ignored-method-name">playVideoTest</span>
+                <br/>
+                <span class="ignored-method-name">buyRentVideoTest</span>
+                <br/>
+                <span class="ignored-method-name">loginWithMailTest</span>
+                <br/>
+                <span class="ignored-method-name">verifyCurrentUrlTest</span>
+                <br/>
+                <span class="ignored-method-name">playStoreButtonTest</span>
+                <br/>
+                <span class="ignored-method-name">updateProfileTest</span>
+                <br/>
+                <span class="ignored-method-name">playStoreButtonTest</span>
+                <br/>
+                <span class="ignored-method-name">loginWithPhoneNumber</span>
+                <br/>
+                <span class="ignored-method-name">filterValuesTest</span>
+                <br/>
+                <span class="ignored-method-name">loginWithMailTest</span>
+                <br/>
+                <span class="ignored-method-name">searchVideoTest</span>
+                <br/>
+                <span class="ignored-method-name">filterValuesTest</span>
+                <br/>
+                <span class="ignored-method-name">footerTermsAndConditionsTest</span>
+                <br/>
+                <span class="ignored-method-name">logoutTest</span>
+                <br/>
+                <span class="ignored-method-name">loginWithMailTest</span>
+                <br/>
+                <span class="ignored-method-name">updateProfileTest</span>
+                <br/>
+                <span class="ignored-method-name">playVideoTest</span>
+                <br/>
+                <span class="ignored-method-name">wrongOtpLoginTest</span>
+                <br/>
+                <span class="ignored-method-name">playVideoTest</span>
+                <br/>
+                <span class="ignored-method-name">buyRentVideoTest</span>
+                <br/>
+                <span class="ignored-method-name">playVideoTest</span>
+                <br/>
+                <span class="ignored-method-name">filterValuesTest</span>
+                <br/>
+                <span class="ignored-method-name">loginWithMailTest</span>
+                <br/>
+                <span class="ignored-method-name">viewAllTest</span>
+                <br/>
+                <span class="ignored-method-name">filterButtonClickTest</span>
+                <br/>
+                <span class="ignored-method-name">updateProfileTest</span>
+                <br/>
+                <span class="ignored-method-name">logoutTest</span>
+                <br/>
                 <span class="ignored-method-name">subscriptionTest</span>
+                <br/>
+                <span class="ignored-method-name">wrongOtpLoginTest</span>
+                <br/>
+                <span class="ignored-method-name">filterValuesTest</span>
+                <br/>
+                <span class="ignored-method-name">updateProfileTest</span>
+                <br/>
+                <span class="ignored-method-name">footerTermsAndConditionsTest</span>
+                <br/>
+                <span class="ignored-method-name">playStoreButtonTest</span>
+                <br/>
+                <span class="ignored-method-name">searchVideoTest</span>
+                <br/>
+                <span class="ignored-method-name">subscriptionTest</span>
+                <br/>
+                <span class="ignored-method-name">playStoreButtonTest</span>
+                <br/>
+                <span class="ignored-method-name">loginWithPhoneNumber</span>
+                <br/>
+                <span class="ignored-method-name">filterButtonClickTest</span>
+                <br/>
+                <span class="ignored-method-name">verifyCurrentUrlTest</span>
+                <br/>
+                <span class="ignored-method-name">subscriptionTest</span>
+                <br/>
+                <span class="ignored-method-name">filterValuesTest</span>
+                <br/>
+                <span class="ignored-method-name">detailedPageWithoutLoginTest</span>
                 <br/>
                 <span class="ignored-method-name">viewAllTest</span>
                 <br/>
                 <span class="ignored-method-name">detailedPageWithoutLoginTest</span>
                 <br/>
-                <span class="ignored-method-name">loginWithPhoneNumber</span>
-                <br/>
                 <span class="ignored-method-name">playVideoTest</span>
                 <br/>
-                <span class="ignored-method-name">footerTermsAndConditionsTest</span>
+                <span class="ignored-method-name">subscriptionTest</span>
                 <br/>
-                <span class="ignored-method-name">buyRentVideoTest</span>
+                <span class="ignored-method-name">subscriptionTest</span>
                 <br/>
-                <span class="ignored-method-name">updateProfileTest</span>
+                <span class="ignored-method-name">wrongOtpLoginTest</span>
                 <br/>
-                <span class="ignored-method-name">filterButtonClickTest</span>
+                <span class="ignored-method-name">viewAllTest</span>
                 <br/>
                 <span class="ignored-method-name">logoutTest</span>
                 <br/>
-                <span class="ignored-method-name">playStoreButtonTest</span>
+                <span class="ignored-method-name">loginWithMailTest</span>
+                <br/>
+                <span class="ignored-method-name">verifyCurrentUrlTest</span>
                 <br/>
                 <span class="ignored-method-name">filterButtonClickTest</span>
-                <br/>
-                <span class="ignored-method-name">loginWithMailTest</span>
-                <br/>
-                <span class="ignored-method-name">loginWithMailTest</span>
-                <br/>
-                <span class="ignored-method-name">wrongOtpLoginTest</span>
-                <br/>
-                <span class="ignored-method-name">viewAllTest</span>
-                <br/>
-                <span class="ignored-method-name">loginWithMailTest</span>
-                <br/>
-                <span class="ignored-method-name">viewAllTest</span>
-                <br/>
-                <span class="ignored-method-name">wrongOtpLoginTest</span>
-                <br/>
-                <span class="ignored-method-name">footerTermsAndConditionsTest</span>
                 <br/>
                 <span class="ignored-method-name">searchVideoTest</span>
                 <br/>
                 <span class="ignored-method-name">subscriptionTest</span>
                 <br/>
+                <span class="ignored-method-name">detailedPageWithoutLoginTest</span>
+                <br/>
+                <span class="ignored-method-name">subscriptionTest</span>
+                <br/>
+                <span class="ignored-method-name">filterValuesTest</span>
+                <br/>
+                <span class="ignored-method-name">footerTermsAndConditionsTest</span>
+                <br/>
                 <span class="ignored-method-name">verifyCurrentUrlTest</span>
-                <br/>
-                <span class="ignored-method-name">loginWithPhoneNumber</span>
-                <br/>
-                <span class="ignored-method-name">playStoreButtonTest</span>
-                <br/>
-                <span class="ignored-method-name">footerTermsAndConditionsTest</span>
-                <br/>
-                <span class="ignored-method-name">loginWithPhoneNumber</span>
-                <br/>
-                <span class="ignored-method-name">playVideoTest</span>
-                <br/>
-                <span class="ignored-method-name">filterButtonClickTest</span>
-                <br/>
-                <span class="ignored-method-name">footerTermsAndConditionsTest</span>
                 <br/>
                 <span class="ignored-method-name">detailedPageWithoutLoginTest</span>
                 <br/>
-                <span class="ignored-method-name">playStoreButtonTest</span>
-                <br/>
-                <span class="ignored-method-name">searchVideoTest</span>
-                <br/>
-                <span class="ignored-method-name">filterButtonClickTest</span>
-                <br/>
-                <span class="ignored-method-name">searchVideoTest</span>
-                <br/>
-                <span class="ignored-method-name">logoutTest</span>
-                <br/>
-                <span class="ignored-method-name">loginWithMailTest</span>
-                <br/>
-                <span class="ignored-method-name">verifyCurrentUrlTest</span>
-                <br/>
-                <span class="ignored-method-name">verifyCurrentUrlTest</span>
-                <br/>
-                <span class="ignored-method-name">playStoreButtonTest</span>
-                <br/>
-                <span class="ignored-method-name">logoutTest</span>
-                <br/>
-                <span class="ignored-method-name">viewAllTest</span>
+                <span class="ignored-method-name">updateProfileTest</span>
                 <br/>
                 <span class="ignored-method-name">buyRentVideoTest</span>
                 <br/>
-                <span class="ignored-method-name">loginWithPhoneNumber</span>
-                <br/>
-                <span class="ignored-method-name">updateProfileTest</span>
-                <br/>
-                <span class="ignored-method-name">wrongOtpLoginTest</span>
+                <span class="ignored-method-name">playStoreButtonTest</span>
                 <br/>
                 <span class="ignored-method-name">playVideoTest</span>
+                <br/>
+                <span class="ignored-method-name">filterButtonClickTest</span>
+                <br/>
+                <span class="ignored-method-name">verifyCurrentUrlTest</span>
+                <br/>
+                <span class="ignored-method-name">viewAllTest</span>
+                <br/>
+                <span class="ignored-method-name">logoutTest</span>
+                <br/>
+                <span class="ignored-method-name">verifyCurrentUrlTest</span>
+                <br/>
+                <span class="ignored-method-name">playStoreButtonTest</span>
+                <br/>
+                <span class="ignored-method-name">viewAllTest</span>
+                <br/>
+                <span class="ignored-method-name">logoutTest</span>
+                <br/>
+                <span class="ignored-method-name">searchVideoTest</span>
+                <br/>
+                <span class="ignored-method-name">logoutTest</span>
+                <br/>
+                <span class="ignored-method-name">buyRentVideoTest</span>
+                <br/>
+                <span class="ignored-method-name">viewAllTest</span>
+                <br/>
+                <span class="ignored-method-name">filterButtonClickTest</span>
+                <br/>
+                <span class="ignored-method-name">buyRentVideoTest</span>
+                <br/>
+                <span class="ignored-method-name">subscriptionTest</span>
+                <br/>
+                <span class="ignored-method-name">detailedPageWithoutLoginTest</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -729,108 +889,108 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">loginWithMailTest</span>
-                <span class="method-start">4255 ms</span>
+                <span class="method-start">7814 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">8490 ms</span>
+                <span class="method-start">20238 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">8903 ms</span>
+                <span class="method-start">20821 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">loginWithPhoneNumber</span>
-                <span class="method-start">12438 ms</span>
+                <span class="method-start">25995 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">21423 ms</span>
+                <span class="method-start">41425 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">21861 ms</span>
+                <span class="method-start">41475 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyCurrentUrlTest</span>
-                <span class="method-start">25142 ms</span>
+                <span class="method-start">52128 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">25278 ms</span>
+                <span class="method-start">52182 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">25664 ms</span>
+                <span class="method-start">52733 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">updateProfileTest</span>
-                <span class="method-start">29325 ms</span>
+                <span class="method-start">59506 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">42779 ms</span>
+                <span class="method-start">76054 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">43195 ms</span>
+                <span class="method-start">76545 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">searchVideoTest</span>
-                <span class="method-start">47961 ms</span>
+                <span class="method-start">81473 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">67837 ms</span>
+                <span class="method-start">94092 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">68233 ms</span>
+                <span class="method-start">94589 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">wrongOtpLoginTest</span>
-                <span class="method-start">71194 ms</span>
+                <span class="method-start">100111 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">78375 ms</span>
+                <span class="method-start">107773 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">78734 ms</span>
+                <span class="method-start">108508 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">playVideoTest</span>
-                <span class="method-start">82215 ms</span>
+                <span class="method-start">114202 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">96570 ms</span>
+                <span class="method-start">186303 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">setup</span>
-                <span class="method-start">96995 ms</span>
+                <span class="method-start">187153 ms</span>
               </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">footerTermsAndConditionsTest</span>
-                <span class="method-start">100482 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">teardown</span>
-                <span class="method-start">110546 ms</span>
-              </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">110889 ms</span>
+                <span class="method-start">192721 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">logoutTest</span>
-                <span class="method-start">114582 ms</span>
+                <span class="method-start">196785 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">125078 ms</span>
+                <span class="method-start">212653 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
