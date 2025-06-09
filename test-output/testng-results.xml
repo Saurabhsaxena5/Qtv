@@ -2,20 +2,20 @@
 <testng-results ignored="15" total="16" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-06-08T12:08:43 IST" name="Default suite" finished-at="2025-06-08T12:09:07 IST" duration-ms="23634">
+  <suite started-at="2025-06-09T18:40:53 IST" name="Default suite" finished-at="2025-06-09T18:41:43 IST" duration-ms="49839">
     <groups>
     </groups>
-    <test started-at="2025-06-08T12:08:43 IST" name="Default test" finished-at="2025-06-08T12:09:07 IST" duration-ms="23634">
+    <test started-at="2025-06-09T18:40:53 IST" name="Default test" finished-at="2025-06-09T18:41:43 IST" duration-ms="49839">
       <class name="Chull.TestCase">
-        <test-method is-config="true" signature="setup()[pri:0, instance:Chull.TestCase@7b36aa0c]" started-at="2025-06-08T12:08:43 IST" name="setup" finished-at="2025-06-08T12:08:51 IST" duration-ms="7571" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:Chull.TestCase@7b36aa0c]" started-at="2025-06-09T18:40:53 IST" name="setup" finished-at="2025-06-09T18:41:27 IST" duration-ms="33829" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="viewAllTest()[pri:0, instance:Chull.TestCase@7b36aa0c]" started-at="2025-06-08T12:08:51 IST" name="viewAllTest" finished-at="2025-06-08T12:09:06 IST" duration-ms="14926" status="PASS">
+        <test-method signature="viewAllTest()[pri:0, instance:Chull.TestCase@7b36aa0c]" started-at="2025-06-09T18:41:27 IST" name="viewAllTest" finished-at="2025-06-09T18:41:42 IST" duration-ms="15434" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- viewAllTest -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:Chull.TestCase@7b36aa0c]" started-at="2025-06-08T12:09:06 IST" name="teardown" finished-at="2025-06-08T12:09:07 IST" duration-ms="1062" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:Chull.TestCase@7b36aa0c]" started-at="2025-06-09T18:41:42 IST" name="teardown" finished-at="2025-06-09T18:41:43 IST" duration-ms="527" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->

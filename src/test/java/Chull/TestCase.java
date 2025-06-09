@@ -428,6 +428,53 @@ public class TestCase {
 	// Test Case 14: View all button
 	@Test
 	public void viewAllTest() throws InterruptedException {
+		driver.get("https://chull.tv/"); // Always good to ensure you’re on the right page
+
+		// Click login
+		driver.findElement(By.xpath("//a[@href='/login']")).click();
+		Thread.sleep(2000);
+
+		// Enter mobile number
+		WebElement enterphoneNumber = driver.findElement(By.xpath("//input[@placeholder='Mobile Number']"));
+		enterphoneNumber.sendKeys("8920689888");
+
+		// Click Send OTP
+		driver.findElement(By.xpath("//button[normalize-space()='Send OTP']")).click();
+
+		// Enter OTP
+		driver.findElement(By.xpath("//input[@name='otp']")).sendKeys("1234");
+		Thread.sleep(4000);
+
+		// Click Verify OTP
+		WebElement clickOnSendOtp = driver.findElement(By.xpath("//button[normalize-space()='Verify OTP']"));
+		Thread.sleep(2000);
+		clickOnSendOtp.click();
+
+		// Wait for navigation or home screen to load fully
+		Thread.sleep(3000); // Adjust depending on speed or replace with proper wait
+
+		// Wait until the "Top 10 in India" link is present and clickable
+		try {
+			WebElement top10Link = wait
+					.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(@href,'top-10-in-india')]")));
+			top10Link.click();
+		} catch (TimeoutException e) {
+			System.out.println("Top 10 link not clickable: " + e.getMessage());
+			throw e;
+		}
+
+		// Now check if the view-list div is visible
+		WebElement checkDataVisible = wait
+				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(@class,'view-list')]")));
+		boolean check = checkDataVisible.isDisplayed();
+
+		System.out.println("Is Top 10 content visible: " + check);
+		Thread.sleep(2000);
+	}
+
+	// Test Case 15: Play Store button
+	@Test
+	public void playStoreButtonTest() throws InterruptedException {
 
 		driver.findElement(By.xpath("//a[@href=\"/login\"]")).click();
 		Thread.sleep(2000);
@@ -443,16 +490,6 @@ public class TestCase {
 		Thread.sleep(2000);
 		clickOnSendOtp.click();
 
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@href='/View/home/top-10-in-india/103']")))
-				.click();
-
-		Thread.sleep(2000);
-
-	}
-
-	// Test Case 15: Play Store button
-	@Test
-	public void playStoreButtonTest() {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
 
