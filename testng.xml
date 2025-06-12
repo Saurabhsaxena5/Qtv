@@ -100,7 +100,7 @@
 			</class>
 		</classes>
 	</test>
-	<test name="check on view All button">
+	<test name="check on view All button is workable">
 		<classes>
 			<class name="Chull.TestCase">
 				<methods>
