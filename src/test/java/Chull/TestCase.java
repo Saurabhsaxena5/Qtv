@@ -547,9 +547,10 @@ public class TestCase {
 		System.out.println(url);
 
 	}
+
 	@Test
 	public void watchlist() throws InterruptedException {
-		
+
 		driver.findElement(By.xpath("//a[@href=\"/login\"]")).click();
 		Thread.sleep(2000);
 
@@ -563,34 +564,35 @@ public class TestCase {
 		WebElement clickOnSendOtp = driver.findElement(By.xpath("//button[normalize-space(.)='Verify OTP']"));
 		Thread.sleep(2000);
 		clickOnSendOtp.click();
-		
+
 		driver.findElement(By.xpath("//a[@href='/search']")).click();
 		Thread.sleep(3000);
 		WebElement searchBox = driver.findElement(By.xpath("//input[@type='text']"));
 		searchBox.sendKeys("Hello pooja", Keys.ENTER);
 		Thread.sleep(3000);
-		
-		WebElement clickonVideo = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//img[@alt='Hello Pooja']")));
+
+		WebElement clickonVideo = wait
+				.until(ExpectedConditions.elementToBeClickable(By.xpath("//img[@alt='Hello Pooja']")));
 		clickonVideo.click();
-		
-		WebElement checkvideoIsalreadyinwatchlist = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@class='MuiButtonBase-root MuiIconButton-root watchlist-container']")));
-		if(checkvideoIsalreadyinwatchlist.isDisplayed()) {
+
+		WebElement checkvideoIsalreadyinwatchlist = wait.until(ExpectedConditions.elementToBeClickable(
+				By.xpath("//button[@class='MuiButtonBase-root MuiIconButton-root watchlist-container']")));
+		if (checkvideoIsalreadyinwatchlist.isDisplayed()) {
 			System.out.println("Video is already Added in the watchlist");
-			WebElement clickonwatchlist = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[normalize-space()='WatchList']")));
+			WebElement clickonwatchlist = wait
+					.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[normalize-space()='WatchList']")));
 			clickonwatchlist.click();
-		}
-		else {
+		} else {
 			wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@title='Watchlist']"))).click();
-			
-			
+
 		}
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@title='Watchlist']"))).click();
-		
-		
-		}
+
+	}
+
 	@Test
 	public void checkRelatedvideo() throws InterruptedException {
-		
+
 		driver.findElement(By.xpath("//a[@href=\"/login\"]")).click();
 		Thread.sleep(2000);
 
@@ -604,25 +606,25 @@ public class TestCase {
 		WebElement clickOnSendOtp = driver.findElement(By.xpath("//button[normalize-space(.)='Verify OTP']"));
 		Thread.sleep(2000);
 		clickOnSendOtp.click();
-		
+
 		driver.findElement(By.xpath("//a[@href='/search']")).click();
 		Thread.sleep(3000);
 		WebElement searchBox = driver.findElement(By.xpath("//input[@type='text']"));
 		searchBox.sendKeys("Hello pooja");
-		WebElement ClickOnvideo = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//img[@alt='Hello Pooja']")));
+		WebElement ClickOnvideo = wait
+				.until(ExpectedConditions.elementToBeClickable(By.xpath("//img[@alt='Hello Pooja']")));
 		ClickOnvideo.click();
-		
+
 		Thread.sleep(10000);
-		
-		
-		
-		JavascriptExecutor jse=(JavascriptExecutor)driver;
+
+		JavascriptExecutor jse = (JavascriptExecutor) driver;
 		jse.executeScript("window.scrollBy(0,700)");
 		Thread.sleep(3000);
-		
-		WebElement clickonvideo=wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//img[@class=\"img-top\"]")));
+
+		WebElement clickonvideo = wait
+				.until(ExpectedConditions.elementToBeClickable(By.xpath("//img[@class=\"img-top\"]")));
 		clickonvideo.click();
-		
+
 		WebElement watchVideo = wait
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[contains(@class, 'sc-fUnMCh')]")));
 		watchVideo.click();
@@ -692,6 +694,5 @@ public class TestCase {
 		driver.switchTo().defaultContent();
 		System.out.println("Switched back to main content.");
 	}
-		
-	
+
 }
