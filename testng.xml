@@ -100,11 +100,20 @@
 			</class>
 		</classes>
 	</test>
-	<test name="check on view All button">
+	<test name="check on view All button is workable">
 		<classes>
 			<class name="Chull.TestCase">
 				<methods>
 					<include name="viewAllTest" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Check reltead video play or not">
+		<classes>
+			<class name="Chull.TestCase">
+				<methods>
+					<include name="checkRelatedvideo" />
 				</methods>
 			</class>
 		</classes>
