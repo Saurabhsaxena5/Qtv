@@ -109,5 +109,14 @@
 			</class>
 		</classes>
 	</test>
+	<test name="Check reltead video play or not">
+		<classes>
+			<class name="Chull.TestCase">
+				<methods>
+					<include name="checkRelatedvideo" />
+				</methods>
+			</class>
+		</classes>
+	</test>
 
 </suite>
