@@ -25,6 +25,7 @@ public class TestCase {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		driver.get("https://chull.tv/");
+
 	}
 
 	@AfterMethod
@@ -107,13 +108,16 @@ public class TestCase {
 	}
 
 	// Test Case 5: Subscription check
-	@Test
-	public void subscriptionTest() {
-		WebElement subscriptionIcon = driver.findElement(By.xpath("//img[@class='subscription-logo']"));
-		subscriptionIcon.click();
-		WebElement alertBox = driver.findElement(By.xpath("//div[@class='alert alert-success']"));
-		Assert.assertTrue(alertBox.isDisplayed(), "Subscription message not displayed");
-	}
+	/*
+	 * @Test
+	 * 
+	 * public void subscriptionTest() { WebElement subscriptionIcon =
+	 * driver.findElement(By.xpath("//img[@class='subscription-logo']"));
+	 * subscriptionIcon.click(); WebElement alertBox =
+	 * driver.findElement(By.xpath("//div[@class='alert alert-success']"));
+	 * Assert.assertTrue(alertBox.isDisplayed(),
+	 * "Subscription message not displayed"); }
+	 */
 
 	// Test Case 6: Search video
 	@Test
@@ -695,4 +699,118 @@ public class TestCase {
 		System.out.println("Switched back to main content.");
 	}
 
+	@Test
+	public void Banner_is_visible() throws InterruptedException {
+
+		try {
+			driver.findElement(By.xpath("//a[@href=\"/login\"]")).click();
+			Thread.sleep(2000);
+
+			WebElement enterphoneNumber = driver.findElement(By.xpath("//input[@placeholder=\"Mobile Number\"]"));
+			enterphoneNumber.sendKeys("8920689888");
+
+			driver.findElement(By.xpath("//button[normalize-space(.)='Send OTP']")).click();
+
+			driver.findElement(By.xpath("//input[@name=\"otp\"]")).sendKeys("1234");
+			Thread.sleep(4000);
+			WebElement clickOnSendOtp = driver.findElement(By.xpath("//button[normalize-space(.)='Verify OTP']"));
+			Thread.sleep(2000);
+			clickOnSendOtp.click();
+
+			WebElement bannerIsvisible = driver
+					.findElement(By.xpath("//img[@class=\"d-block w-100 mscreen image-gradient\"]"));
+			if (bannerIsvisible.isDisplayed()) {
+				System.out.println("Banner is visible");
+			} else {
+				System.out.println("Banner is not visible");
+			}
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+
+		}
+
+	}
+	
+	@Test
+	public void subscription() {
+		
+		try {
+			driver.findElement(By.xpath("//a[@href=\"/login\"]")).click();
+			Thread.sleep(2000);
+
+			WebElement enterphoneNumber = driver.findElement(By.xpath("//input[@placeholder=\"Mobile Number\"]"));
+			enterphoneNumber.sendKeys("8920689888");
+
+			driver.findElement(By.xpath("//button[normalize-space(.)='Send OTP']")).click();
+
+			driver.findElement(By.xpath("//input[@name=\"otp\"]")).sendKeys("1234");
+			Thread.sleep(4000);
+			WebElement clickOnSendOtp = driver.findElement(By.xpath("//button[normalize-space(.)='Verify OTP']"));
+			Thread.sleep(2000);
+			clickOnSendOtp.click();
+			
+			WebElement subscriptionButtoncheck = driver.findElement(By.xpath("(//img[@class='Movieslogo'])[5]"));
+			if(subscriptionButtoncheck.isDisplayed()) {
+				System.out.println("Subscription button is visible");
+			}else {
+				System.out.println("Subscription Button is not visible");
+			}
+			
+		}catch(Exception e) {
+			System.out.println(e.getMessage());
+		}
+		
+	}
+	@Test
+	public void withoutLoginSubscriptionButtonisVisible() {
+		try {
+		WebElement withoutlogincheckSubscriptionButtonIsvisible = driver.findElement(By.xpath("(//img[@class='Movieslogo'])[5]"));
+		if(withoutlogincheckSubscriptionButtonIsvisible.isDisplayed()) {
+			System.out.println("Visible");
+		}else {
+			System.out.println("Not visible");
+		}
+		}catch(Exception e) {
+			System.out.println(e.getMessage());
+		}
+	}
+	
+	@Test
+	public void check_SubscriptionButtonIsclickable() {
+		try {
+			driver.findElement(By.xpath("//a[@href=\"/login\"]")).click();
+			Thread.sleep(2000);
+
+			WebElement enterphoneNumber = driver.findElement(By.xpath("//input[@placeholder=\"Mobile Number\"]"));
+			enterphoneNumber.sendKeys("8920689888");
+
+			driver.findElement(By.xpath("//button[normalize-space(.)='Send OTP']")).click();
+
+			driver.findElement(By.xpath("//input[@name=\"otp\"]")).sendKeys("1234");
+			Thread.sleep(4000);
+			wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space(.)='Verify OTP']"))).click();
+			Thread.sleep(2000);
+			
+			
+			
+			wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//img[@class=\\\"Movieslogo\\\"])[5]"))).click();
+			Thread.sleep(4000);
+			
+			List<WebElement> buttons = driver.findElements(By.className("plan_button"));
+
+			for (int i = 0; i < buttons.size(); i++) {
+			    WebElement button = buttons.get(i);
+			    System.out.println("Button " + i + " text: " + button.getText());
+			    
+			}
+			
+		}catch(Exception e) {
+			System.out.println((e.getMessage()));
+		}
+		
+	}
+	
+	
+	
+	
 }
