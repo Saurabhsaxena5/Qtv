@@ -1,201 +1,249 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="204" total="216" passed="12" failed="0" skipped="0">
+<testng-results ignored="300" total="315" passed="15" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-06-18T14:33:09 IST" name="Suite" finished-at="2025-06-18T14:38:35 IST" duration-ms="326110">
+  <suite started-at="2025-06-27T18:44:42 IST" name="Suite" finished-at="2025-06-27T18:48:58 IST" duration-ms="256408">
     <groups>
     </groups>
-    <test started-at="2025-06-18T14:33:09 IST" name="Login with Email" finished-at="2025-06-18T14:33:27 IST" duration-ms="18218">
+    <test started-at="2025-06-27T18:44:42 IST" name="Login with Email" finished-at="2025-06-27T18:44:51 IST" duration-ms="9278">
       <class name="Chull.TestCase">
-        <test-method is-config="true" signature="setup()[pri:0, instance:Chull.TestCase@4f6ee6e4]" started-at="2025-06-18T14:33:09 IST" name="setup" finished-at="2025-06-18T14:33:23 IST" duration-ms="13326" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:Chull.TestCase@799f10e1]" started-at="2025-06-27T18:44:42 IST" name="setup" finished-at="2025-06-27T18:44:47 IST" duration-ms="5205" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="loginWithMailTest()[pri:0, instance:Chull.TestCase@4f6ee6e4]" started-at="2025-06-18T14:33:23 IST" name="loginWithMailTest" finished-at="2025-06-18T14:33:27 IST" duration-ms="4162" status="PASS">
+        <test-method signature="loginWithMailTest()[pri:0, instance:Chull.TestCase@799f10e1]" started-at="2025-06-27T18:44:47 IST" name="loginWithMailTest" finished-at="2025-06-27T18:44:50 IST" duration-ms="3425" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginWithMailTest -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:Chull.TestCase@4f6ee6e4]" started-at="2025-06-18T14:33:27 IST" name="teardown" finished-at="2025-06-18T14:33:27 IST" duration-ms="634" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:Chull.TestCase@799f10e1]" started-at="2025-06-27T18:44:50 IST" name="teardown" finished-at="2025-06-27T18:44:51 IST" duration-ms="574" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- Chull.TestCase -->
     </test> <!-- Login with Email -->
-    <test started-at="2025-06-18T14:33:27 IST" name="Login with Wrong OTP" finished-at="2025-06-18T14:33:43 IST" duration-ms="15366">
+    <test started-at="2025-06-27T18:44:51 IST" name="Login with Wrong OTP" finished-at="2025-06-27T18:45:05 IST" duration-ms="13989">
       <class name="Chull.TestCase">
-        <test-method is-config="true" signature="setup()[pri:0, instance:Chull.TestCase@459e9125]" started-at="2025-06-18T14:33:27 IST" name="setup" finished-at="2025-06-18T14:33:32 IST" duration-ms="4855" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:Chull.TestCase@6f03482]" started-at="2025-06-27T18:44:51 IST" name="setup" finished-at="2025-06-27T18:44:55 IST" duration-ms="4231" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="loginWithPhoneNumber()[pri:0, instance:Chull.TestCase@459e9125]" started-at="2025-06-18T14:33:32 IST" name="loginWithPhoneNumber" finished-at="2025-06-18T14:33:42 IST" duration-ms="9975" status="PASS">
+        <test-method signature="loginWithPhoneNumber()[pri:0, instance:Chull.TestCase@6f03482]" started-at="2025-06-27T18:44:55 IST" name="loginWithPhoneNumber" finished-at="2025-06-27T18:45:04 IST" duration-ms="9075" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginWithPhoneNumber -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:Chull.TestCase@459e9125]" started-at="2025-06-18T14:33:42 IST" name="teardown" finished-at="2025-06-18T14:33:43 IST" duration-ms="533" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:Chull.TestCase@6f03482]" started-at="2025-06-27T18:45:04 IST" name="teardown" finished-at="2025-06-27T18:45:05 IST" duration-ms="680" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- Chull.TestCase -->
     </test> <!-- Login with Wrong OTP -->
-    <test started-at="2025-06-18T14:33:43 IST" name="Verify Current URL" finished-at="2025-06-18T14:33:48 IST" duration-ms="5124">
+    <test started-at="2025-06-27T18:45:05 IST" name="Verify Current URL" finished-at="2025-06-27T18:45:09 IST" duration-ms="3856">
       <class name="Chull.TestCase">
-        <test-method is-config="true" signature="setup()[pri:0, instance:Chull.TestCase@7cc0cdad]" started-at="2025-06-18T14:33:43 IST" name="setup" finished-at="2025-06-18T14:33:48 IST" duration-ms="4750" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:Chull.TestCase@179ece50]" started-at="2025-06-27T18:45:05 IST" name="setup" finished-at="2025-06-27T18:45:08 IST" duration-ms="3237" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="verifyCurrentUrlTest()[pri:0, instance:Chull.TestCase@7cc0cdad]" started-at="2025-06-18T14:33:48 IST" name="verifyCurrentUrlTest" finished-at="2025-06-18T14:33:48 IST" duration-ms="37" status="PASS">
+        <test-method signature="verifyCurrentUrlTest()[pri:0, instance:Chull.TestCase@179ece50]" started-at="2025-06-27T18:45:08 IST" name="verifyCurrentUrlTest" finished-at="2025-06-27T18:45:08 IST" duration-ms="82" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyCurrentUrlTest -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:Chull.TestCase@7cc0cdad]" started-at="2025-06-18T14:33:48 IST" name="teardown" finished-at="2025-06-18T14:33:48 IST" duration-ms="334" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:Chull.TestCase@179ece50]" started-at="2025-06-27T18:45:08 IST" name="teardown" finished-at="2025-06-27T18:45:09 IST" duration-ms="535" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- Chull.TestCase -->
     </test> <!-- Verify Current URL -->
-    <test started-at="2025-06-18T14:33:48 IST" name="Update Profile" finished-at="2025-06-18T14:34:36 IST" duration-ms="47876">
+    <test started-at="2025-06-27T18:45:09 IST" name="Update Profile" finished-at="2025-06-27T18:45:27 IST" duration-ms="18578">
       <class name="Chull.TestCase">
-        <test-method is-config="true" signature="setup()[pri:0, instance:Chull.TestCase@368f2016]" started-at="2025-06-18T14:33:48 IST" name="setup" finished-at="2025-06-18T14:34:20 IST" duration-ms="32367" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:Chull.TestCase@1fa121e2]" started-at="2025-06-27T18:45:09 IST" name="setup" finished-at="2025-06-27T18:45:12 IST" duration-ms="3425" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="updateProfileTest()[pri:0, instance:Chull.TestCase@368f2016]" started-at="2025-06-18T14:34:20 IST" name="updateProfileTest" finished-at="2025-06-18T14:34:35 IST" duration-ms="15033" status="PASS">
+        <test-method signature="updateProfileTest()[pri:0, instance:Chull.TestCase@1fa121e2]" started-at="2025-06-27T18:45:12 IST" name="updateProfileTest" finished-at="2025-06-27T18:45:27 IST" duration-ms="14572" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- updateProfileTest -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:Chull.TestCase@368f2016]" started-at="2025-06-18T14:34:35 IST" name="teardown" finished-at="2025-06-18T14:34:36 IST" duration-ms="471" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:Chull.TestCase@1fa121e2]" started-at="2025-06-27T18:45:27 IST" name="teardown" finished-at="2025-06-27T18:45:27 IST" duration-ms="577" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- Chull.TestCase -->
     </test> <!-- Update Profile -->
-    <test started-at="2025-06-18T14:34:36 IST" name="Search Box Functionality" finished-at="2025-06-18T14:35:02 IST" duration-ms="26578">
+    <test started-at="2025-06-27T18:45:27 IST" name="Search Box Functionality" finished-at="2025-06-27T18:45:52 IST" duration-ms="24417">
       <class name="Chull.TestCase">
-        <test-method is-config="true" signature="setup()[pri:0, instance:Chull.TestCase@48f2bd5b]" started-at="2025-06-18T14:34:36 IST" name="setup" finished-at="2025-06-18T14:34:41 IST" duration-ms="4979" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:Chull.TestCase@62ddbd7e]" started-at="2025-06-27T18:45:27 IST" name="setup" finished-at="2025-06-27T18:45:31 IST" duration-ms="3974" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="searchVideoTest()[pri:0, instance:Chull.TestCase@48f2bd5b]" started-at="2025-06-18T14:34:41 IST" name="searchVideoTest" finished-at="2025-06-18T14:35:02 IST" duration-ms="21052" status="PASS">
+        <test-method signature="searchVideoTest()[pri:0, instance:Chull.TestCase@62ddbd7e]" started-at="2025-06-27T18:45:31 IST" name="searchVideoTest" finished-at="2025-06-27T18:45:51 IST" duration-ms="19815" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchVideoTest -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:Chull.TestCase@48f2bd5b]" started-at="2025-06-18T14:35:02 IST" name="teardown" finished-at="2025-06-18T14:35:02 IST" duration-ms="544" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:Chull.TestCase@62ddbd7e]" started-at="2025-06-27T18:45:51 IST" name="teardown" finished-at="2025-06-27T18:45:52 IST" duration-ms="624" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- Chull.TestCase -->
     </test> <!-- Search Box Functionality -->
-    <test started-at="2025-06-18T14:35:02 IST" name="Login with Incorrect OTP" finished-at="2025-06-18T14:35:15 IST" duration-ms="12783">
+    <test started-at="2025-06-27T18:45:52 IST" name="Login with Incorrect OTP" finished-at="2025-06-27T18:46:03 IST" duration-ms="11454">
       <class name="Chull.TestCase">
-        <test-method is-config="true" signature="setup()[pri:0, instance:Chull.TestCase@1aafa419]" started-at="2025-06-18T14:35:02 IST" name="setup" finished-at="2025-06-18T14:35:07 IST" duration-ms="4586" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:Chull.TestCase@1a677343]" started-at="2025-06-27T18:45:52 IST" name="setup" finished-at="2025-06-27T18:45:55 IST" duration-ms="3686" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="wrongOtpLoginTest()[pri:0, instance:Chull.TestCase@1aafa419]" started-at="2025-06-18T14:35:07 IST" name="wrongOtpLoginTest" finished-at="2025-06-18T14:35:15 IST" duration-ms="7864" status="PASS">
+        <test-method signature="wrongOtpLoginTest()[pri:0, instance:Chull.TestCase@1a677343]" started-at="2025-06-27T18:45:55 IST" name="wrongOtpLoginTest" finished-at="2025-06-27T18:46:03 IST" duration-ms="7191" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- wrongOtpLoginTest -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:Chull.TestCase@1aafa419]" started-at="2025-06-18T14:35:15 IST" name="teardown" finished-at="2025-06-18T14:35:15 IST" duration-ms="329" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:Chull.TestCase@1a677343]" started-at="2025-06-27T18:46:03 IST" name="teardown" finished-at="2025-06-27T18:46:03 IST" duration-ms="576" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- Chull.TestCase -->
     </test> <!-- Login with Incorrect OTP -->
-    <test started-at="2025-06-18T14:35:15 IST" name="Play Video" finished-at="2025-06-18T14:35:38 IST" duration-ms="23201">
+    <test started-at="2025-06-27T18:46:03 IST" name="Play Video" finished-at="2025-06-27T18:46:26 IST" duration-ms="22690">
       <class name="Chull.TestCase">
-        <test-method is-config="true" signature="setup()[pri:0, instance:Chull.TestCase@55182842]" started-at="2025-06-18T14:35:15 IST" name="setup" finished-at="2025-06-18T14:35:20 IST" duration-ms="4520" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:Chull.TestCase@3857f613]" started-at="2025-06-27T18:46:03 IST" name="setup" finished-at="2025-06-27T18:46:08 IST" duration-ms="4532" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="playVideoTest()[pri:0, instance:Chull.TestCase@55182842]" started-at="2025-06-18T14:35:20 IST" name="playVideoTest" finished-at="2025-06-18T14:35:38 IST" duration-ms="18180" status="PASS">
+        <test-method signature="playVideoTest()[pri:0, instance:Chull.TestCase@3857f613]" started-at="2025-06-27T18:46:08 IST" name="playVideoTest" finished-at="2025-06-27T18:46:25 IST" duration-ms="17561" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- playVideoTest -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:Chull.TestCase@55182842]" started-at="2025-06-18T14:35:38 IST" name="teardown" finished-at="2025-06-18T14:35:38 IST" duration-ms="499" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:Chull.TestCase@3857f613]" started-at="2025-06-27T18:46:25 IST" name="teardown" finished-at="2025-06-27T18:46:26 IST" duration-ms="595" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- Chull.TestCase -->
     </test> <!-- Play Video -->
-    <test started-at="2025-06-18T14:35:38 IST" name="Footer Terms Conditions" finished-at="2025-06-18T14:35:52 IST" duration-ms="13229">
+    <test started-at="2025-06-27T18:46:26 IST" name="Footer Terms Conditions" finished-at="2025-06-27T18:46:37 IST" duration-ms="11025">
       <class name="Chull.TestCase">
-        <test-method is-config="true" signature="setup()[pri:0, instance:Chull.TestCase@5656be13]" started-at="2025-06-18T14:35:38 IST" name="setup" finished-at="2025-06-18T14:35:43 IST" duration-ms="4935" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:Chull.TestCase@3c9754d8]" started-at="2025-06-27T18:46:26 IST" name="setup" finished-at="2025-06-27T18:46:30 IST" duration-ms="3824" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="footerTermsAndConditionsTest()[pri:0, instance:Chull.TestCase@5656be13]" started-at="2025-06-18T14:35:43 IST" name="footerTermsAndConditionsTest" finished-at="2025-06-18T14:35:51 IST" duration-ms="7794" status="PASS">
+        <test-method signature="footerTermsAndConditionsTest()[pri:0, instance:Chull.TestCase@3c9754d8]" started-at="2025-06-27T18:46:30 IST" name="footerTermsAndConditionsTest" finished-at="2025-06-27T18:46:36 IST" duration-ms="6670" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- footerTermsAndConditionsTest -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:Chull.TestCase@5656be13]" started-at="2025-06-18T14:35:51 IST" name="teardown" finished-at="2025-06-18T14:35:52 IST" duration-ms="493" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:Chull.TestCase@3c9754d8]" started-at="2025-06-27T18:46:36 IST" name="teardown" finished-at="2025-06-27T18:46:37 IST" duration-ms="528" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- Chull.TestCase -->
     </test> <!-- Footer Terms Conditions -->
-    <test started-at="2025-06-18T14:35:52 IST" name="Logout Functionality" finished-at="2025-06-18T14:36:36 IST" duration-ms="44642">
+    <test started-at="2025-06-27T18:46:37 IST" name="Logout Functionality" finished-at="2025-06-27T18:46:53 IST" duration-ms="16365">
       <class name="Chull.TestCase">
-        <test-method is-config="true" signature="setup()[pri:0, instance:Chull.TestCase@14cd1699]" started-at="2025-06-18T14:35:52 IST" name="setup" finished-at="2025-06-18T14:36:24 IST" duration-ms="32623" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:Chull.TestCase@4d1c00d0]" started-at="2025-06-27T18:46:37 IST" name="setup" finished-at="2025-06-27T18:46:41 IST" duration-ms="4227" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="logoutTest()[pri:0, instance:Chull.TestCase@14cd1699]" started-at="2025-06-18T14:36:24 IST" name="logoutTest" finished-at="2025-06-18T14:36:36 IST" duration-ms="11347" status="PASS">
+        <test-method signature="logoutTest()[pri:0, instance:Chull.TestCase@4d1c00d0]" started-at="2025-06-27T18:46:41 IST" name="logoutTest" finished-at="2025-06-27T18:46:53 IST" duration-ms="11432" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logoutTest -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:Chull.TestCase@14cd1699]" started-at="2025-06-18T14:36:36 IST" name="teardown" finished-at="2025-06-18T14:36:36 IST" duration-ms="670" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:Chull.TestCase@4d1c00d0]" started-at="2025-06-27T18:46:53 IST" name="teardown" finished-at="2025-06-27T18:46:53 IST" duration-ms="703" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- Chull.TestCase -->
     </test> <!-- Logout Functionality -->
-    <test started-at="2025-06-18T14:36:36 IST" name="Filter Button Check" finished-at="2025-06-18T14:37:30 IST" duration-ms="54040">
+    <test started-at="2025-06-27T18:46:53 IST" name="Filter Button Check" finished-at="2025-06-27T18:47:21 IST" duration-ms="27319">
       <class name="Chull.TestCase">
-        <test-method is-config="true" signature="setup()[pri:0, instance:Chull.TestCase@71d44a3]" started-at="2025-06-18T14:36:36 IST" name="setup" finished-at="2025-06-18T14:37:09 IST" duration-ms="32927" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:Chull.TestCase@bcec361]" started-at="2025-06-27T18:46:53 IST" name="setup" finished-at="2025-06-27T18:47:00 IST" duration-ms="6425" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="filterValuesTest()[pri:0, instance:Chull.TestCase@71d44a3]" started-at="2025-06-18T14:37:09 IST" name="filterValuesTest" finished-at="2025-06-18T14:37:30 IST" duration-ms="20457" status="PASS">
+        <test-method signature="filterValuesTest()[pri:0, instance:Chull.TestCase@bcec361]" started-at="2025-06-27T18:47:00 IST" name="filterValuesTest" finished-at="2025-06-27T18:47:20 IST" duration-ms="20238" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- filterValuesTest -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:Chull.TestCase@71d44a3]" started-at="2025-06-18T14:37:30 IST" name="teardown" finished-at="2025-06-18T14:37:30 IST" duration-ms="650" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:Chull.TestCase@bcec361]" started-at="2025-06-27T18:47:20 IST" name="teardown" finished-at="2025-06-27T18:47:21 IST" duration-ms="653" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- Chull.TestCase -->
     </test> <!-- Filter Button Check -->
-    <test started-at="2025-06-18T14:37:30 IST" name="check on view All button is workable" finished-at="2025-06-18T14:37:52 IST" duration-ms="22001">
+    <test started-at="2025-06-27T18:47:21 IST" name="check on view All button is workable" finished-at="2025-06-27T18:47:41 IST" duration-ms="20558">
       <class name="Chull.TestCase">
-        <test-method is-config="true" signature="setup()[pri:0, instance:Chull.TestCase@34123d65]" started-at="2025-06-18T14:37:30 IST" name="setup" finished-at="2025-06-18T14:37:36 IST" duration-ms="5241" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:Chull.TestCase@3d285d7e]" started-at="2025-06-27T18:47:21 IST" name="setup" finished-at="2025-06-27T18:47:25 IST" duration-ms="3917" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="viewAllTest()[pri:0, instance:Chull.TestCase@34123d65]" started-at="2025-06-18T14:37:36 IST" name="viewAllTest" finished-at="2025-06-18T14:37:52 IST" duration-ms="16088" status="PASS">
+        <test-method signature="viewAllTest()[pri:0, instance:Chull.TestCase@3d285d7e]" started-at="2025-06-27T18:47:25 IST" name="viewAllTest" finished-at="2025-06-27T18:47:41 IST" duration-ms="16024" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- viewAllTest -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:Chull.TestCase@34123d65]" started-at="2025-06-18T14:37:52 IST" name="teardown" finished-at="2025-06-18T14:37:52 IST" duration-ms="664" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:Chull.TestCase@3d285d7e]" started-at="2025-06-27T18:47:41 IST" name="teardown" finished-at="2025-06-27T18:47:41 IST" duration-ms="614" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- Chull.TestCase -->
     </test> <!-- check on view All button is workable -->
-    <test started-at="2025-06-18T14:37:52 IST" name="Check reltead video play or not" finished-at="2025-06-18T14:38:35 IST" duration-ms="42834">
+    <test started-at="2025-06-27T18:47:41 IST" name="Check reltead video play or not" finished-at="2025-06-27T18:48:23 IST" duration-ms="42014">
       <class name="Chull.TestCase">
-        <test-method is-config="true" signature="setup()[pri:0, instance:Chull.TestCase@3e694b3f]" started-at="2025-06-18T14:37:52 IST" name="setup" finished-at="2025-06-18T14:37:56 IST" duration-ms="3458" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:Chull.TestCase@367ffa75]" started-at="2025-06-27T18:47:41 IST" name="setup" finished-at="2025-06-27T18:47:45 IST" duration-ms="3822" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="checkRelatedvideo()[pri:0, instance:Chull.TestCase@3e694b3f]" started-at="2025-06-18T14:37:56 IST" name="checkRelatedvideo" finished-at="2025-06-18T14:38:34 IST" duration-ms="38472" status="PASS">
+        <test-method signature="checkRelatedvideo()[pri:0, instance:Chull.TestCase@367ffa75]" started-at="2025-06-27T18:47:45 IST" name="checkRelatedvideo" finished-at="2025-06-27T18:48:22 IST" duration-ms="37405" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkRelatedvideo -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:Chull.TestCase@3e694b3f]" started-at="2025-06-18T14:38:34 IST" name="teardown" finished-at="2025-06-18T14:38:35 IST" duration-ms="899" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:Chull.TestCase@367ffa75]" started-at="2025-06-27T18:48:22 IST" name="teardown" finished-at="2025-06-27T18:48:23 IST" duration-ms="786" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- Chull.TestCase -->
     </test> <!-- Check reltead video play or not -->
+    <test started-at="2025-06-27T18:48:23 IST" name="Verify Banner is visible or not" finished-at="2025-06-27T18:48:39 IST" duration-ms="15832">
+      <class name="Chull.TestCase">
+        <test-method is-config="true" signature="setup()[pri:0, instance:Chull.TestCase@1c1bbc4e]" started-at="2025-06-27T18:48:23 IST" name="setup" finished-at="2025-06-27T18:48:27 IST" duration-ms="3636" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="Banner_is_visible()[pri:0, instance:Chull.TestCase@1c1bbc4e]" started-at="2025-06-27T18:48:27 IST" name="Banner_is_visible" finished-at="2025-06-27T18:48:38 IST" duration-ms="11630" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Banner_is_visible -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:Chull.TestCase@1c1bbc4e]" started-at="2025-06-27T18:48:38 IST" name="teardown" finished-at="2025-06-27T18:48:39 IST" duration-ms="563" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- Chull.TestCase -->
+    </test> <!-- Verify Banner is visible or not -->
+    <test started-at="2025-06-27T18:48:39 IST" name="Verify subscription button is visible or not" finished-at="2025-06-27T18:48:54 IST" duration-ms="14722">
+      <class name="Chull.TestCase">
+        <test-method is-config="true" signature="setup()[pri:0, instance:Chull.TestCase@1ce24091]" started-at="2025-06-27T18:48:39 IST" name="setup" finished-at="2025-06-27T18:48:43 IST" duration-ms="4091" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="subscription()[pri:0, instance:Chull.TestCase@1ce24091]" started-at="2025-06-27T18:48:43 IST" name="subscription" finished-at="2025-06-27T18:48:53 IST" duration-ms="9970" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- subscription -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:Chull.TestCase@1ce24091]" started-at="2025-06-27T18:48:53 IST" name="teardown" finished-at="2025-06-27T18:48:54 IST" duration-ms="659" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- Chull.TestCase -->
+    </test> <!-- Verify subscription button is visible or not -->
+    <test started-at="2025-06-27T18:48:54 IST" name="verify Without login suscription Button is visible or not" finished-at="2025-06-27T18:48:58 IST" duration-ms="4165">
+      <class name="Chull.TestCase">
+        <test-method is-config="true" signature="setup()[pri:0, instance:Chull.TestCase@24269709]" started-at="2025-06-27T18:48:54 IST" name="setup" finished-at="2025-06-27T18:48:57 IST" duration-ms="3403" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="withoutLoginSubscriptionButtonisVisible()[pri:0, instance:Chull.TestCase@24269709]" started-at="2025-06-27T18:48:57 IST" name="withoutLoginSubscriptionButtonisVisible" finished-at="2025-06-27T18:48:57 IST" duration-ms="174" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- withoutLoginSubscriptionButtonisVisible -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:Chull.TestCase@24269709]" started-at="2025-06-27T18:48:57 IST" name="teardown" finished-at="2025-06-27T18:48:58 IST" duration-ms="585" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- Chull.TestCase -->
+    </test> <!-- verify Without login suscription Button is visible or not -->
   </suite> <!-- Suite -->
 </testng-results>

@@ -793,7 +793,7 @@ public class TestCase {
 			
 			
 			
-			wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//img[@class=\\\"Movieslogo\\\"])[5]"))).click();
+			wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//img[@class='Movieslogo'])[5]"))).click();
 			Thread.sleep(4000);
 			
 			List<WebElement> buttons = driver.findElements(By.className("plan_button"));

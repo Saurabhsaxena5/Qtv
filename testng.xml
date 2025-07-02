@@ -118,5 +118,41 @@
 			</class>
 		</classes>
 	</test>
+	<test name="Verify Banner is visible or not">
+		<classes>
+			<class name="Chull.TestCase">
+				<methods>
+					<include name="Banner_is_visible" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Verify subscription button is visible or not">
+		<classes>
+			<class name="Chull.TestCase">
+				<methods>
+					<include name="subscription" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<!--<test name="Verify subscription button is visible or not">
+	<classes>
+		<class name="Chull.TestCase">
+			<methods>
+				<include name="subscription" />
+			</methods>
+		</class>
+	</classes>
+	</test>-->
+	<test name="verify Without login suscription Button is visible or not">
+		<classes>
+			<class name="Chull.TestCase">
+				<methods>
+					<include name="withoutLoginSubscriptionButtonisVisible" />
+				</methods>
+			</class>
+		</classes>
+	</test>
 
 </suite>
