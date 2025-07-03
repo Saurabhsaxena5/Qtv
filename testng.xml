@@ -145,7 +145,7 @@
 		</class>
 	</classes>
 	</test>-->
-	<test name="verify Without login suscription Button is visible or not">
+	<test name="verify that without login subscription button is visible">
 		<classes>
 			<class name="Chull.TestCase">
 				<methods>
@@ -154,7 +154,7 @@
 			</class>
 		</classes>
 	</test>
-	<test name="verify Without login suscription Button is visible or not">
+	<test name="check after login subscription button is visile">
 		<classes>
 			<class name="Chull.TestCase">
 				<methods>
