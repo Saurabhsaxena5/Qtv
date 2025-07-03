@@ -5,8 +5,10 @@ import java.util.List;
 import java.util.Set;
 import java.util.function.Function;
 
+import org.jspecify.annotations.Nullable;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.*;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -20,7 +22,8 @@ public class TestCase {
 
 	@BeforeMethod
 	public void setup() {
-		driver = new ChromeDriver();
+		ChromeOptions option = new ChromeOptions();
+		driver = new ChromeDriver(option);
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -465,7 +468,7 @@ public class TestCase {
 			top10Link.click();
 		} catch (TimeoutException e) {
 			System.out.println("Top 10 link not clickable: " + e.getMessage());
-			
+
 		}
 
 		// Now check if the view-list div is visible
@@ -730,10 +733,10 @@ public class TestCase {
 		}
 
 	}
-	
+
 	@Test
 	public void subscription() {
-		
+
 		try {
 			driver.findElement(By.xpath("//a[@href=\"/login\"]")).click();
 			Thread.sleep(2000);
@@ -748,35 +751,37 @@ public class TestCase {
 			WebElement clickOnSendOtp = driver.findElement(By.xpath("//button[normalize-space(.)='Verify OTP']"));
 			Thread.sleep(2000);
 			clickOnSendOtp.click();
-			
+
 			WebElement subscriptionButtoncheck = driver.findElement(By.xpath("(//img[@class='Movieslogo'])[5]"));
-			if(subscriptionButtoncheck.isDisplayed()) {
+			if (subscriptionButtoncheck.isDisplayed()) {
 				System.out.println("Subscription button is visible");
-			}else {
+			} else {
 				System.out.println("Subscription Button is not visible");
 			}
-			
-		}catch(Exception e) {
+
+		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}
-		
+
 	}
+
 	@Test
 	public void withoutLoginSubscriptionButtonisVisible() {
 		try {
-		WebElement withoutlogincheckSubscriptionButtonIsvisible = driver.findElement(By.xpath("(//img[@class='Movieslogo'])[5]"));
-		if(withoutlogincheckSubscriptionButtonIsvisible.isDisplayed()) {
-			System.out.println("Visible");
-		}else {
-			System.out.println("Not visible");
-		}
-		}catch(Exception e) {
+			WebElement withoutlogincheckSubscriptionButtonIsvisible = driver
+					.findElement(By.xpath("(//img[@class='Movieslogo'])[5]"));
+			if (withoutlogincheckSubscriptionButtonIsvisible.isDisplayed()) {
+				System.out.println("Visible");
+			} else {
+				System.out.println("Not visible");
+			}
+		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}
 	}
-	
+
 	@Test
-	public void check_SubscriptionButtonIsclickable() {
+	public void check_SubscriptionisVisible() {
 		try {
 			driver.findElement(By.xpath("//a[@href=\"/login\"]")).click();
 			Thread.sleep(2000);
@@ -788,29 +793,170 @@ public class TestCase {
 
 			driver.findElement(By.xpath("//input[@name=\"otp\"]")).sendKeys("1234");
 			Thread.sleep(4000);
-			wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space(.)='Verify OTP']"))).click();
+			wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space(.)='Verify OTP']")))
+					.click();
 			Thread.sleep(2000);
-			
-			
-			
+
 			wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//img[@class='Movieslogo'])[5]"))).click();
 			Thread.sleep(4000);
-			
+
 			List<WebElement> buttons = driver.findElements(By.className("plan_button"));
 
 			for (int i = 0; i < buttons.size(); i++) {
-			    WebElement button = buttons.get(i);
-			    System.out.println("Button " + i + " text: " + button.getText());
-			    
+				WebElement button = buttons.get(i);
+				System.out.println("Button " + i + " text: " + button.getText());
+
 			}
-			
-		}catch(Exception e) {
+
+		} catch (Exception e) {
 			System.out.println((e.getMessage()));
+
 		}
-		
+	}
+
+	@Test
+	public void checkUserBuySubscription() {
+		try {
+			driver.findElement(By.xpath("//a[@href=\"/login\"]")).click();
+			Thread.sleep(2000);
+
+			WebElement enterPhoneNumber = driver.findElement(By.xpath("//input[@placeholder=\"Mobile Number\"]"));
+			enterPhoneNumber.sendKeys("8920689888");
+
+			driver.findElement(By.xpath("//button[normalize-space(.)='Send OTP']")).click();
+
+			driver.findElement(By.xpath("//input[@name=\"otp\"]")).sendKeys("1234");
+			Thread.sleep(4000);
+			wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space(.)='Verify OTP']")))
+					.click();
+			Thread.sleep(2000);
+
+			wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//img[@class='Movieslogo'])[5]"))).click();
+			Thread.sleep(4000);
+
+			WebElement validateuseralreadybuy = wait.until(ExpectedConditions.elementToBeClickable(
+					By.xpath("//div[@class=\"subscription_button btn btn-lg btn-block planBtn\"]")));
+
+			if (validateuseralreadybuy.isDisplayed()) {
+				System.out.println("User already purchase a subscription");
+			} else {
+				System.out.println("User not a subscription");
+			}
+		}
+
+		catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+
+	}
+
+	@Test
+	public void verifyPopupIsVisibleuserBuysubscription() {
+		try {
+			driver.findElement(By.xpath("//a[@href=\"/login\"]")).click();
+			Thread.sleep(2000);
+
+			WebElement enterPhoneNumber = driver.findElement(By.xpath("//input[@placeholder=\"Mobile Number\"]"));
+			enterPhoneNumber.sendKeys("8920689888");
+
+			driver.findElement(By.xpath("//button[normalize-space(.)='Send OTP']")).click();
+
+			driver.findElement(By.xpath("//input[@name=\"otp\"]")).sendKeys("1234");
+			Thread.sleep(4000);
+			wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space(.)='Verify OTP']")))
+					.click();
+			Thread.sleep(2000);
+
+			wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//img[@class='Movieslogo'])[5]"))).click();
+			Thread.sleep(4000);
+
+			WebElement validateuseralreadybuy = wait.until(ExpectedConditions.elementToBeClickable(
+					By.xpath("//div[@class=\"subscription_button btn btn-lg btn-block planBtn\"]")));
+
+			if (validateuseralreadybuy.isDisplayed()) {
+
+				WebElement verify = wait.until(ExpectedConditions.elementToBeClickable(
+						By.xpath("//button[@class=\"subscription_button btn btn-lg btn-block planBtn\"]")));
+				verify.click();
+				Alert popup = driver.switchTo().alert();
+				Thread.sleep(5000);
+				popup.accept();
+
+				System.out.println(popup.getText());
+
+			}
+
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+
+	}
+
+	@Test
+	public void verifyurl() {
+
+		String actualurl = driver.getCurrentUrl();
+		String Expectedurl = "https://chull.tv/";
+		if (actualurl.equals(Expectedurl)) {
+			System.out.println("passed");
+		} else {
+			System.out.println("Mismatch url");
+			Assert.assertEquals(actualurl, Expectedurl, "Passed");
+		}
+
+	}
+
+	@Test
+	public void checkTagname() {
+
+		String actual = driver.getTitle();
+		String expected = "Chull Tv - OTT Platform for Web Series Movies Entertainment Show";
+
+		if (actual.equals(expected)) {
+			System.out.println("verify the url");
+		} else {
+			System.out.println("Mismatchurl");
+		}
+
+	}
+
+	@Test
+	public void countTotalVideosWithNames() {
+		try {
+			// Locate all video containers
+			List<WebElement> videoElements = wait
+					.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//div[@class='custom-div']")));
+
+			int count = videoElements.size();
+			System.out.println("Total number of videos: " + count);
+
+			
+		}
+
+		catch (Exception e) {
+			e.printStackTrace();
+			System.out.println("Failed to count or list video names.");
+		}
 	}
 	
-	
+	@Test
+	public void Extractallthevideoname() {
+		try {
+			// Locate all video containers
+			List<WebElement> videoElements = wait
+					.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//div[@class='custom-div']")));
+
+			int count = videoElements.size();
+			System.out.println("Total number of videos: " + count);
+
+			
+		}
+
+		catch (Exception e) {
+			e.printStackTrace();
+			System.out.println("Failed to count or list video names.");
+		}
+	}
 	
 	
 }

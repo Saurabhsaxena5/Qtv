@@ -145,11 +145,66 @@
 		</class>
 	</classes>
 	</test>-->
-	<test name="verify Without login suscription Button is visible or not">
+	<test name="verify that without login subscription button is visible">
 		<classes>
 			<class name="Chull.TestCase">
 				<methods>
 					<include name="withoutLoginSubscriptionButtonisVisible" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="check after login subscription button is visile">
+		<classes>
+			<class name="Chull.TestCase">
+				<methods>
+					<include name="check_SubscriptionisVisible" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Verify user already buy a subscription or not">
+		<classes>
+			<class name="Chull.TestCase">
+				<methods>
+					<include name="checkUserBuySubscription" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test
+		name="check if user already buy a subscription so popup is visible or not">
+		<classes>
+			<class name="Chull.TestCase">
+				<methods>
+					<include name="verifyPopupIsVisibleuserBuysubscription" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Verify the url">
+		<classes>
+			<class name="Chull.TestCase">
+				<methods>
+					<include name="verifyurl" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Verify the current page source">
+		<classes>
+			<class name="Chull.TestCase">
+				<methods>
+					<include name="checkTagname" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Verify total number of videos in Homepage">
+		<classes>
+			<class name="Chull.TestCase">
+				<methods>
+					<include name="countTotalVideosWithNames" />
 				</methods>
 			</class>
 		</classes>
