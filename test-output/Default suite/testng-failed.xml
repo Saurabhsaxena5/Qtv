@@ -5,27 +5,9 @@
     <classes>
       <class name="Chull.TestCase">
         <methods>
-          <include name="filterButtonClickTest"/>
-          <include name="playVideoTest"/>
           <include name="loginWithPhoneNumber"/>
-          <include name="detailedPageWithoutLoginTest"/>
-          <include name="searchVideoTest"/>
           <include name="teardown"/>
           <include name="setup"/>
-          <include name="footerTermsAndConditionsTest"/>
-          <include name="updateProfileTest"/>
-          <include name="logoutTest"/>
-          <include name="verifyurl"/>
-          <include name="buyRentVideoTest"/>
-          <include name="watchlist"/>
-          <include name="checkRelatedvideo"/>
-          <include name="viewAllTest"/>
-          <include name="wrongOtpLoginTest"/>
-          <include name="checkTagname"/>
-          <include name="verifyCurrentUrlTest"/>
-          <include name="loginWithMailTest"/>
-          <include name="filterValuesTest"/>
-          <include name="playStoreButtonTest"/>
         </methods>
       </class> <!-- Chull.TestCase -->
     </classes>

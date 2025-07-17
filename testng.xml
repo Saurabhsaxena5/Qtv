@@ -4,7 +4,7 @@
 
 	<test name="Login with Email">
 		<classes>
-			<class name="Chull.TestCase">
+			<class name="Foursidesplay.TestCase">
 				<methods>
 					<include name="loginWithMailTest" />
 				</methods>
@@ -13,7 +13,7 @@
 	</test>
 	<test name="Login with Wrong OTP">
 		<classes>
-			<class name="Chull.TestCase">
+			<class name="Foursidesplay.TestCase">
 				<methods>
 					<include name="loginWithPhoneNumber" />
 				</methods>
@@ -23,7 +23,7 @@
 
 	<test name="Verify Current URL">
 		<classes>
-			<class name="Chull.TestCase">
+			<class name="Foursidesplay.TestCase">
 				<methods>
 					<include name="verifyCurrentUrlTest" />
 				</methods>
@@ -33,7 +33,7 @@
 
 	<test name="Update Profile">
 		<classes>
-			<class name="Chull.TestCase">
+			<class name="Foursidesplay.TestCase">
 				<methods>
 					<include name="updateProfileTest" />
 				</methods>
@@ -43,7 +43,7 @@
 
 	<test name="Search Box Functionality">
 		<classes>
-			<class name="Chull.TestCase">
+			<class name="Foursidesplay.TestCase">
 				<methods>
 					<include name="searchVideoTest" />
 				</methods>
@@ -53,7 +53,7 @@
 
 	<test name="Login with Incorrect OTP">
 		<classes>
-			<class name="Chull.TestCase">
+			<class name="Foursidesplay.TestCase">
 				<methods>
 					<include name="wrongOtpLoginTest" />
 				</methods>
@@ -63,7 +63,7 @@
 
 	<test name="Play Video">
 		<classes>
-			<class name="Chull.TestCase">
+			<class name="Foursidesplay.TestCase">
 				<methods>
 					<include name="playVideoTest" />
 				</methods>
@@ -73,7 +73,7 @@
 
 	<test name="Footer Terms Conditions">
 		<classes>
-			<class name="Chull.TestCase">
+			<class name="Foursidesplay.TestCase">
 				<methods>
 					<include name="footerTermsAndConditionsTest" />
 				</methods>
@@ -83,7 +83,7 @@
 
 	<test name="Logout Functionality">
 		<classes>
-			<class name="Chull.TestCase">
+			<class name="Foursidesplay.TestCase">
 				<methods>
 					<include name="logoutTest" />
 				</methods>
@@ -93,7 +93,7 @@
 
 	<test name="Filter Button Check">
 		<classes>
-			<class name="Chull.TestCase">
+			<class name="Foursidesplay.TestCase">
 				<methods>
 					<include name="filterValuesTest" />
 				</methods>
@@ -102,7 +102,7 @@
 	</test>
 	<test name="check on view All button is workable">
 		<classes>
-			<class name="Chull.TestCase">
+			<class name="Foursidesplay.TestCase">
 				<methods>
 					<include name="viewAllTest" />
 				</methods>
@@ -111,7 +111,7 @@
 	</test>
 	<test name="Check reltead video play or not">
 		<classes>
-			<class name="Chull.TestCase">
+			<class name="Foursidesplay.TestCase">
 				<methods>
 					<include name="checkRelatedvideo" />
 				</methods>
@@ -120,7 +120,7 @@
 	</test>
 	<test name="Verify Banner is visible or not">
 		<classes>
-			<class name="Chull.TestCase">
+			<class name="Foursidesplay.TestCase">
 				<methods>
 					<include name="Banner_is_visible" />
 				</methods>
@@ -129,7 +129,7 @@
 	</test>
 	<test name="Verify subscription button is visible or not">
 		<classes>
-			<class name="Chull.TestCase">
+			<class name="Foursidesplay.TestCase">
 				<methods>
 					<include name="subscription" />
 				</methods>
@@ -138,7 +138,7 @@
 	</test>
 	<!--<test name="Verify subscription button is visible or not">
 	<classes>
-		<class name="Chull.TestCase">
+		<class name="Foursidesplay.TestCase">
 			<methods>
 				<include name="subscription" />
 			</methods>
@@ -147,7 +147,7 @@
 	</test>-->
 	<test name="verify that without login subscription button is visible">
 		<classes>
-			<class name="Chull.TestCase">
+			<class name="Foursidesplay.TestCase">
 				<methods>
 					<include name="withoutLoginSubscriptionButtonisVisible" />
 				</methods>
@@ -156,7 +156,7 @@
 	</test>
 	<test name="check after login subscription button is visile">
 		<classes>
-			<class name="Chull.TestCase">
+			<class name="Foursidesplay.TestCase">
 				<methods>
 					<include name="check_SubscriptionisVisible" />
 				</methods>
@@ -165,7 +165,7 @@
 	</test>
 	<test name="Verify user already buy a subscription or not">
 		<classes>
-			<class name="Chull.TestCase">
+			<class name="Foursidesplay.TestCase">
 				<methods>
 					<include name="checkUserBuySubscription" />
 				</methods>
@@ -175,7 +175,7 @@
 	<test
 		name="check if user already buy a subscription so popup is visible or not">
 		<classes>
-			<class name="Chull.TestCase">
+			<class name="Foursidesplay.TestCase">
 				<methods>
 					<include name="verifyPopupIsVisibleuserBuysubscription" />
 				</methods>
@@ -184,7 +184,7 @@
 	</test>
 	<test name="Verify the url">
 		<classes>
-			<class name="Chull.TestCase">
+			<class name="Foursidesplay.TestCase">
 				<methods>
 					<include name="verifyurl" />
 				</methods>
@@ -193,7 +193,7 @@
 	</test>
 	<test name="Verify the current page source">
 		<classes>
-			<class name="Chull.TestCase">
+			<class name="Foursidesplay.TestCase">
 				<methods>
 					<include name="checkTagname" />
 				</methods>
@@ -202,7 +202,7 @@
 	</test>
 	<test name="Verify total number of videos in Homepage">
 		<classes>
-			<class name="Chull.TestCase">
+			<class name="Foursidesplay.TestCase">
 				<methods>
 					<include name="countTotalVideosWithNames" />
 				</methods>
