@@ -269,7 +269,7 @@ public class Testcase2 extends TestCase {
 	}
 	
 	@Test
-	public void checkAlllanguageIsvisible() {
+	public void checkAllanguageIsvisible() {
 		
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//img[@class=\"Movieslogo\"])[4]"))).click();
 	    List<WebElement> listOfLanguages = driver.findElements(By.xpath("//div[@class='card']"));

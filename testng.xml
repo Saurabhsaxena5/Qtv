@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Suite">
+<suite name="Suite" parallel="tests" thread-count="1">
 
 	<test name="Login with Email">
 		<classes>
+
 			<class name="Foursidesplay.TestCase">
 				<methods>
 					<include name="loginWithMailTest" />
@@ -12,6 +13,7 @@
 		</classes>
 	</test>
 	<test name="Login with Wrong OTP">
+
 		<classes>
 			<class name="Foursidesplay.TestCase">
 				<methods>
@@ -22,6 +24,7 @@
 	</test>
 
 	<test name="Verify Current URL">
+
 		<classes>
 			<class name="Foursidesplay.TestCase">
 				<methods>
@@ -32,6 +35,7 @@
 	</test>
 
 	<test name="Update Profile">
+
 		<classes>
 			<class name="Foursidesplay.TestCase">
 				<methods>
@@ -136,15 +140,6 @@
 			</class>
 		</classes>
 	</test>
-	<!--<test name="Verify subscription button is visible or not">
-	<classes>
-		<class name="Foursidesplay.TestCase">
-			<methods>
-				<include name="subscription" />
-			</methods>
-		</class>
-	</classes>
-	</test>-->
 	<test name="verify that without login subscription button is visible">
 		<classes>
 			<class name="Foursidesplay.TestCase">
@@ -209,5 +204,97 @@
 			</class>
 		</classes>
 	</test>
+	<test name="verify the Applestrore button is redirect or not">
+		<classes>
+			<class name="Foursidesplay.TestCase">
+				<methods>
+					<include name="ApplestoreButtonTest" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="verify the playstore button is redirect or not">
+		<classes>
+			<class name="Foursidesplay.TestCase">
+				<methods>
+					<include name="playstore" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="verify that the coupon code  with the price ">
+		<classes>
+			<class name="Foursidesplay.Testcase2">
+				<methods>
+					<include name="checkcouponprice" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="verify that the coupon with the percentage ">
+		<classes>
+			<class name="Foursidesplay.Testcase2">
+				<methods>
+					<include name="couponPercentage" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Verify that coupon code enter">
+		<classes>
+			<class name="Foursidesplay.Testcase2">
+				<methods>
+					<include name="checkrazorpayopen" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="verify that if user enter the Invalid data in the searchfield">
+		<classes>
+			<class name="Foursidesplay.Testcase2">
+				<methods>
+					<include name="Validate_No_Data_message_is_visible" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test
+		name="verify that without login if user click on the watchnow so redirect into login">
+		<classes>
+			<class name="Foursidesplay.Testcase2">
+				<methods>
+					<include name="clickwatchnow_userredirect_into_login" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Validate No of banner is visible in the Subscription page">
+		<classes>
+			<class name="Foursidesplay.Testcase2">
+				<methods>
+					<include name="insidecouponpagebannerisvisible" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Check No of banner is visible in the Homepage">
+		<classes>
+			<class name="Foursidesplay.Testcase2">
+				<methods>
+					<include name="checkNoofBannerpresendInHomepage" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Check All the Language is visible properly">
+		<classes>
+			<class name="Foursidesplay.Testcase2">
+				<methods>
+					<include name="checkAlllanguageIsvisible" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
 
 </suite>

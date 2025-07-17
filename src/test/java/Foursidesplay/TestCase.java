@@ -13,6 +13,7 @@ import org.openqa.selenium.support.ui.*;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class TestCase {
@@ -20,6 +21,7 @@ public class TestCase {
 	WebDriver driver;
 	WebDriverWait wait;
 
+	@Parameters("browser")
 	@BeforeMethod
 	public void setup() {
 		ChromeOptions option = new ChromeOptions();
@@ -87,7 +89,7 @@ public class TestCase {
 
 		driver.findElement(By.xpath("//a[@href='/Profile']")).click();
 
-		WebElement editBtn = driver.findElement(By.xpath("//button[@class=\"edit-button\"]"));
+		WebElement editBtn = driver.findElement(By.xpath("//button[@class=\"edit-button-yellow\"]"));
 		editBtn.click();
 		WebElement input = driver.findElement(By.xpath("//input[@class='input-name']"));
 		input.clear();
@@ -144,7 +146,7 @@ public class TestCase {
 		driver.findElement(By.xpath("//a[@href='/search']")).click();
 		Thread.sleep(3000);
 		WebElement searchBox = driver.findElement(By.xpath("//input[@type='text']"));
-		searchBox.sendKeys("Love kills", Keys.ENTER);
+		searchBox.sendKeys("Prati Roju Pandage", Keys.ENTER);
 		Thread.sleep(3000);
 		WebElement checkonvideo = driver.findElement(By.xpath("//img[@class=\"img-top\"]"));
 		if (checkonvideo.isDisplayed()) {
@@ -200,10 +202,10 @@ public class TestCase {
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@href='/search']"))).click();
 		WebElement searchBox = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@type='text']")));
-		searchBox.sendKeys("Love kills", Keys.ENTER);
+		searchBox.sendKeys("Prati Roju Pandage", Keys.ENTER);
 
 		WebElement videoThumb = wait
-				.until(ExpectedConditions.elementToBeClickable(By.xpath("//img[@alt='Love kills']")));
+				.until(ExpectedConditions.elementToBeClickable(By.xpath("//img[@alt='Prati Roju Pandage']")));
 		videoThumb.click();
 
 		// Step 3: Watch Video
@@ -617,9 +619,9 @@ public class TestCase {
 		driver.findElement(By.xpath("//a[@href='/search']")).click();
 		Thread.sleep(3000);
 		WebElement searchBox = driver.findElement(By.xpath("//input[@type='text']"));
-		searchBox.sendKeys("Hello pooja");
+		searchBox.sendKeys("Prati Roju Pandage");
 		WebElement ClickOnvideo = wait
-				.until(ExpectedConditions.elementToBeClickable(By.xpath("//img[@alt='Hello Pooja']")));
+				.until(ExpectedConditions.elementToBeClickable(By.xpath("//img[@alt='Prati Roju Pandage']")));
 		ClickOnvideo.click();
 
 		Thread.sleep(10000);
@@ -896,7 +898,7 @@ public class TestCase {
 	public void verifyurl() {
 
 		String actualurl = driver.getCurrentUrl();
-		String Expectedurl = "https://chull.tv/";
+		String Expectedurl = "https://4sidesplay.com/";
 		if (actualurl.equals(Expectedurl)) {
 			System.out.println("passed");
 		} else {
