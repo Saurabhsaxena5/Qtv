@@ -1,4 +1,4 @@
-package Foursidesplay;
+package Qtv;
 
 import java.time.Duration;
 import java.util.List;
@@ -29,7 +29,7 @@ public class TestCase {
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		driver.get("https://4sidesplay.com/");
+		driver.get("https://qtv.ottpeople.com/");
 
 	}
 
@@ -912,7 +912,7 @@ public class TestCase {
 	public void checkTagname() {
 
 		String actual = driver.getTitle();
-		String expected = "Foursidesplay Tv - OTT Platform for Web Series Movies Entertainment Show";
+		String expected = "Qtv Tv - OTT Platform for Web Series Movies Entertainment Show";
 
 		if (actual.equals(expected)) {
 			System.out.println("verify the url");

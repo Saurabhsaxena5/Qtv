@@ -5,7 +5,7 @@
 	<test name="Login with Email">
 		<classes>
 
-			<class name="Foursidesplay.TestCase">
+			<class name="QTV.TestCase">
 				<methods>
 					<include name="loginWithMailTest" />
 				</methods>
@@ -15,7 +15,7 @@
 	<test name="Login with Wrong OTP">
 
 		<classes>
-			<class name="Foursidesplay.TestCase">
+			<class name="QTV.TestCase">
 				<methods>
 					<include name="loginWithPhoneNumber" />
 				</methods>
@@ -26,7 +26,7 @@
 	<test name="Verify Current URL">
 
 		<classes>
-			<class name="Foursidesplay.TestCase">
+			<class name="QTV.TestCase">
 				<methods>
 					<include name="verifyCurrentUrlTest" />
 				</methods>
@@ -37,7 +37,7 @@
 	<test name="Update Profile">
 
 		<classes>
-			<class name="Foursidesplay.TestCase">
+			<class name="QTV.TestCase">
 				<methods>
 					<include name="updateProfileTest" />
 				</methods>
@@ -47,7 +47,7 @@
 
 	<test name="Search Box Functionality">
 		<classes>
-			<class name="Foursidesplay.TestCase">
+			<class name="QTV.TestCase">
 				<methods>
 					<include name="searchVideoTest" />
 				</methods>
@@ -57,7 +57,7 @@
 
 	<test name="Login with Incorrect OTP">
 		<classes>
-			<class name="Foursidesplay.TestCase">
+			<class name="QTV.TestCase">
 				<methods>
 					<include name="wrongOtpLoginTest" />
 				</methods>
@@ -67,7 +67,7 @@
 
 	<test name="Play Video">
 		<classes>
-			<class name="Foursidesplay.TestCase">
+			<class name="QTV.TestCase">
 				<methods>
 					<include name="playVideoTest" />
 				</methods>
@@ -77,7 +77,7 @@
 
 	<test name="Footer Terms Conditions">
 		<classes>
-			<class name="Foursidesplay.TestCase">
+			<class name="QTV.TestCase">
 				<methods>
 					<include name="footerTermsAndConditionsTest" />
 				</methods>
@@ -87,7 +87,7 @@
 
 	<test name="Logout Functionality">
 		<classes>
-			<class name="Foursidesplay.TestCase">
+			<class name="QTV.TestCase">
 				<methods>
 					<include name="logoutTest" />
 				</methods>
@@ -97,7 +97,7 @@
 
 	<test name="Filter Button Check">
 		<classes>
-			<class name="Foursidesplay.TestCase">
+			<class name="QTV.TestCase">
 				<methods>
 					<include name="filterValuesTest" />
 				</methods>
@@ -106,7 +106,7 @@
 	</test>
 	<test name="check on view All button is workable">
 		<classes>
-			<class name="Foursidesplay.TestCase">
+			<class name="QTV.TestCase">
 				<methods>
 					<include name="viewAllTest" />
 				</methods>
@@ -115,7 +115,7 @@
 	</test>
 	<test name="Check reltead video play or not">
 		<classes>
-			<class name="Foursidesplay.TestCase">
+			<class name="QTV.TestCase">
 				<methods>
 					<include name="checkRelatedvideo" />
 				</methods>
@@ -124,7 +124,7 @@
 	</test>
 	<test name="Verify Banner is visible or not">
 		<classes>
-			<class name="Foursidesplay.TestCase">
+			<class name="QTV.TestCase">
 				<methods>
 					<include name="Banner_is_visible" />
 				</methods>
@@ -133,7 +133,7 @@
 	</test>
 	<test name="Verify subscription button is visible or not">
 		<classes>
-			<class name="Foursidesplay.TestCase">
+			<class name="QTV.TestCase">
 				<methods>
 					<include name="subscription" />
 				</methods>
@@ -142,7 +142,7 @@
 	</test>
 	<test name="verify that without login subscription button is visible">
 		<classes>
-			<class name="Foursidesplay.TestCase">
+			<class name="QTV.TestCase">
 				<methods>
 					<include name="withoutLoginSubscriptionButtonisVisible" />
 				</methods>
@@ -151,7 +151,7 @@
 	</test>
 	<test name="check after login subscription button is visile">
 		<classes>
-			<class name="Foursidesplay.TestCase">
+			<class name="QTV.TestCase">
 				<methods>
 					<include name="check_SubscriptionisVisible" />
 				</methods>
@@ -160,7 +160,7 @@
 	</test>
 	<test name="Verify user already buy a subscription or not">
 		<classes>
-			<class name="Foursidesplay.TestCase">
+			<class name="QTV.TestCase">
 				<methods>
 					<include name="checkUserBuySubscription" />
 				</methods>
@@ -170,7 +170,7 @@
 	<test
 		name="check if user already buy a subscription so popup is visible or not">
 		<classes>
-			<class name="Foursidesplay.TestCase">
+			<class name="QTV.TestCase">
 				<methods>
 					<include name="verifyPopupIsVisibleuserBuysubscription" />
 				</methods>
@@ -179,7 +179,7 @@
 	</test>
 	<test name="Verify the url">
 		<classes>
-			<class name="Foursidesplay.TestCase">
+			<class name="QTV.TestCase">
 				<methods>
 					<include name="verifyurl" />
 				</methods>
@@ -188,7 +188,7 @@
 	</test>
 	<test name="Verify the current page source">
 		<classes>
-			<class name="Foursidesplay.TestCase">
+			<class name="QTV.TestCase">
 				<methods>
 					<include name="checkTagname" />
 				</methods>
@@ -197,7 +197,7 @@
 	</test>
 	<test name="Verify total number of videos in Homepage">
 		<classes>
-			<class name="Foursidesplay.TestCase">
+			<class name="QTV.TestCase">
 				<methods>
 					<include name="countTotalVideosWithNames" />
 				</methods>
@@ -206,7 +206,7 @@
 	</test>
 	<test name="verify the Applestrore button is redirect or not">
 		<classes>
-			<class name="Foursidesplay.TestCase">
+			<class name="QTV.TestCase">
 				<methods>
 					<include name="ApplestoreButtonTest" />
 				</methods>
@@ -215,7 +215,7 @@
 	</test>
 	<test name="verify the playstore button is redirect or not">
 		<classes>
-			<class name="Foursidesplay.TestCase">
+			<class name="QTV.TestCase">
 				<methods>
 					<include name="playstore" />
 				</methods>
@@ -224,7 +224,7 @@
 	</test>
 	<test name="verify that the coupon code  with the price ">
 		<classes>
-			<class name="Foursidesplay.Testcase2">
+			<class name="QTV.Testcase2">
 				<methods>
 					<include name="checkcouponprice" />
 				</methods>
@@ -233,7 +233,7 @@
 	</test>
 	<test name="verify that the coupon with the percentage ">
 		<classes>
-			<class name="Foursidesplay.Testcase2">
+			<class name="QTV.Testcase2">
 				<methods>
 					<include name="couponPercentage" />
 				</methods>
@@ -242,7 +242,7 @@
 	</test>
 	<test name="Verify that coupon code enter">
 		<classes>
-			<class name="Foursidesplay.Testcase2">
+			<class name="QTV.Testcase2">
 				<methods>
 					<include name="checkrazorpayopen" />
 				</methods>
@@ -251,7 +251,7 @@
 	</test>
 	<test name="verify that if user enter the Invalid data in the searchfield">
 		<classes>
-			<class name="Foursidesplay.Testcase2">
+			<class name="QTV.Testcase2">
 				<methods>
 					<include name="Validate_No_Data_message_is_visible" />
 				</methods>
@@ -261,7 +261,7 @@
 	<test
 		name="verify that without login if user click on the watchnow so redirect into login">
 		<classes>
-			<class name="Foursidesplay.Testcase2">
+			<class name="QTV.Testcase2">
 				<methods>
 					<include name="clickwatchnow_userredirect_into_login" />
 				</methods>
@@ -270,7 +270,7 @@
 	</test>
 	<test name="Validate No of banner is visible in the Subscription page">
 		<classes>
-			<class name="Foursidesplay.Testcase2">
+			<class name="QTV.Testcase2">
 				<methods>
 					<include name="insidecouponpagebannerisvisible" />
 				</methods>
@@ -279,7 +279,7 @@
 	</test>
 	<test name="Check No of banner is visible in the Homepage">
 		<classes>
-			<class name="Foursidesplay.Testcase2">
+			<class name="QTV.Testcase2">
 				<methods>
 					<include name="checkNoofBannerpresendInHomepage" />
 				</methods>
@@ -288,7 +288,7 @@
 	</test>
 	<test name="Check All the Language is visible properly">
 		<classes>
-			<class name="Foursidesplay.Testcase2">
+			<class name="QTV.Testcase2">
 				<methods>
 					<include name="checkAlllanguageIsvisible" />
 				</methods>
