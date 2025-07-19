@@ -12,17 +12,50 @@
       </class> <!-- Foursidesplay.TestCase -->
     </classes>
   </test> <!-- Update Profile(failed) -->
-  <test thread-count="1" parallel="tests" name="Check reltead video play or not(failed)" verbose="0">
+  <test thread-count="1" parallel="tests" name="Search Box Functionality(failed)" verbose="0">
     <classes>
       <class name="Foursidesplay.TestCase">
         <methods>
-          <include name="checkRelatedvideo"/>
+          <include name="teardown"/>
+          <include name="setup"/>
+          <include name="searchVideoTest"/>
+        </methods>
+      </class> <!-- Foursidesplay.TestCase -->
+    </classes>
+  </test> <!-- Search Box Functionality(failed) -->
+  <test thread-count="1" parallel="tests" name="Login with Incorrect OTP(failed)" verbose="0">
+    <classes>
+      <class name="Foursidesplay.TestCase">
+        <methods>
+          <include name="wrongOtpLoginTest"/>
           <include name="teardown"/>
           <include name="setup"/>
         </methods>
       </class> <!-- Foursidesplay.TestCase -->
     </classes>
-  </test> <!-- Check reltead video play or not(failed) -->
+  </test> <!-- Login with Incorrect OTP(failed) -->
+  <test thread-count="1" parallel="tests" name="Play Video(failed)" verbose="0">
+    <classes>
+      <class name="Foursidesplay.TestCase">
+        <methods>
+          <include name="playVideoTest"/>
+          <include name="teardown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- Foursidesplay.TestCase -->
+    </classes>
+  </test> <!-- Play Video(failed) -->
+  <test thread-count="1" parallel="tests" name="Footer Terms Conditions(failed)" verbose="0">
+    <classes>
+      <class name="Foursidesplay.TestCase">
+        <methods>
+          <include name="teardown"/>
+          <include name="setup"/>
+          <include name="footerTermsAndConditionsTest"/>
+        </methods>
+      </class> <!-- Foursidesplay.TestCase -->
+    </classes>
+  </test> <!-- Footer Terms Conditions(failed) -->
   <test thread-count="1" parallel="tests" name="verify that without login if user click on the watchnow so redirect into login(failed)" verbose="0">
     <classes>
       <class name="Foursidesplay.Testcase2">

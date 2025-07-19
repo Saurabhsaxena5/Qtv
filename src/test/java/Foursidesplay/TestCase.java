@@ -932,7 +932,6 @@ public class TestCase {
 			int count = videoElements.size();
 			System.out.println("Total number of videos: " + count);
 
-			
 		}
 
 		catch (Exception e) {
@@ -940,7 +939,7 @@ public class TestCase {
 			System.out.println("Failed to count or list video names.");
 		}
 	}
-	
+
 	@Test
 	public void Extractallthevideoname() {
 		try {
@@ -951,7 +950,6 @@ public class TestCase {
 			int count = videoElements.size();
 			System.out.println("Total number of videos: " + count);
 
-			
 		}
 
 		catch (Exception e) {
@@ -959,6 +957,5 @@ public class TestCase {
 			System.out.println("Failed to count or list video names.");
 		}
 	}
-	
-	
+
 }
