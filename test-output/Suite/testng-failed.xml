@@ -1,70 +1,114 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite thread-count="2" parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="2" parallel="tests" name="Update Profile(failed)">
+<suite thread-count="1" parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="1" parallel="tests" name="Login with Email(failed)">
     <classes>
-      <class name="Foursidesplay.TestCase">
+      <class name="Qtv.TestCase">
+        <methods>
+          <include name="loginWithMailTest"/>
+          <include name="teardown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- Qtv.TestCase -->
+    </classes>
+  </test> <!-- Login with Email(failed) -->
+  <test thread-count="1" parallel="tests" name="Login with Wrong OTP(failed)">
+    <classes>
+      <class name="Qtv.TestCase">
+        <methods>
+          <include name="loginWithPhoneNumber"/>
+          <include name="teardown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- Qtv.TestCase -->
+    </classes>
+  </test> <!-- Login with Wrong OTP(failed) -->
+  <test thread-count="1" parallel="tests" name="Verify Current URL(failed)">
+    <classes>
+      <class name="Qtv.TestCase">
+        <methods>
+          <include name="teardown"/>
+          <include name="verifyCurrentUrlTest"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- Qtv.TestCase -->
+    </classes>
+  </test> <!-- Verify Current URL(failed) -->
+  <test thread-count="1" parallel="tests" name="Update Profile(failed)">
+    <classes>
+      <class name="Qtv.TestCase">
         <methods>
           <include name="updateProfileTest"/>
           <include name="teardown"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- Foursidesplay.TestCase -->
+      </class> <!-- Qtv.TestCase -->
     </classes>
   </test> <!-- Update Profile(failed) -->
-  <test thread-count="2" parallel="tests" name="Search Box Functionality(failed)">
+  <test thread-count="1" parallel="tests" name="Search Box Functionality(failed)">
     <classes>
-      <class name="Foursidesplay.TestCase">
+      <class name="Qtv.TestCase">
         <methods>
           <include name="teardown"/>
-          <include name="setup"/>
           <include name="searchVideoTest"/>
+          <include name="setup"/>
         </methods>
-      </class> <!-- Foursidesplay.TestCase -->
+      </class> <!-- Qtv.TestCase -->
     </classes>
   </test> <!-- Search Box Functionality(failed) -->
-  <test thread-count="2" parallel="tests" name="Play Video(failed)">
+  <test thread-count="1" parallel="tests" name="Play Video(failed)">
     <classes>
-      <class name="Foursidesplay.TestCase">
+      <class name="Qtv.TestCase">
         <methods>
-          <include name="playVideoTest"/>
           <include name="teardown"/>
+          <include name="playVideoTest"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- Foursidesplay.TestCase -->
+      </class> <!-- Qtv.TestCase -->
     </classes>
   </test> <!-- Play Video(failed) -->
-  <test thread-count="2" parallel="tests" name="Filter Button Check(failed)">
+  <test thread-count="1" parallel="tests" name="Check reltead video play or not(failed)">
     <classes>
-      <class name="Foursidesplay.TestCase">
+      <class name="Qtv.TestCase">
         <methods>
-          <include name="filterValuesTest"/>
           <include name="teardown"/>
-          <include name="setup"/>
-        </methods>
-      </class> <!-- Foursidesplay.TestCase -->
-    </classes>
-  </test> <!-- Filter Button Check(failed) -->
-  <test thread-count="2" parallel="tests" name="Check reltead video play or not(failed)">
-    <classes>
-      <class name="Foursidesplay.TestCase">
-        <methods>
           <include name="checkRelatedvideo"/>
-          <include name="teardown"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- Foursidesplay.TestCase -->
+      </class> <!-- Qtv.TestCase -->
     </classes>
   </test> <!-- Check reltead video play or not(failed) -->
-  <test thread-count="2" parallel="tests" name="verify that without login if user click on the watchnow so redirect into login(failed)">
+  <test thread-count="1" parallel="tests" name="Verify the url(failed)">
     <classes>
-      <class name="Foursidesplay.Testcase2">
+      <class name="Qtv.TestCase">
+        <methods>
+          <include name="verifyurl"/>
+          <include name="teardown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- Qtv.TestCase -->
+    </classes>
+  </test> <!-- Verify the url(failed) -->
+  <test thread-count="1" parallel="tests" name="Verify the current page source(failed)">
+    <classes>
+      <class name="Qtv.TestCase">
+        <methods>
+          <include name="checkTagname"/>
+          <include name="teardown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- Qtv.TestCase -->
+    </classes>
+  </test> <!-- Verify the current page source(failed) -->
+  <test thread-count="1" parallel="tests" name="verify that without login if user click on the watchnow so redirect into login(failed)">
+    <classes>
+      <class name="Qtv.Testcase2">
         <methods>
           <include name="clickwatchnow_userredirect_into_login"/>
           <include name="teardown"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- Foursidesplay.Testcase2 -->
+      </class> <!-- Qtv.Testcase2 -->
     </classes>
   </test> <!-- verify that without login if user click on the watchnow so redirect into login(failed) -->
 </suite> <!-- Failed suite [Suite] -->

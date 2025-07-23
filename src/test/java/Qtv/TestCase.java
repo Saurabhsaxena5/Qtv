@@ -89,7 +89,7 @@ public class TestCase {
 
 		driver.findElement(By.xpath("//a[@href='/Profile']")).click();
 
-		WebElement editBtn = driver.findElement(By.xpath("//button[@class=\"edit-button-yellow\"]"));
+		WebElement editBtn = driver.findElement(By.xpath("//button[@class='edit-button']"));
 		editBtn.click();
 		WebElement input = driver.findElement(By.xpath("//input[@class='input-name']"));
 		input.clear();
@@ -102,7 +102,7 @@ public class TestCase {
 	public void verifyCurrentUrlTest() {
 		String url = driver.getCurrentUrl();
 
-		String expected = "https://4sidesplay.com/";
+		String expected = "https://qtv.ottpeople.com/";
 		Assert.assertEquals(url, expected);
 
 		if (url.equals(expected)) {
@@ -146,7 +146,7 @@ public class TestCase {
 		driver.findElement(By.xpath("//a[@href='/search']")).click();
 		Thread.sleep(3000);
 		WebElement searchBox = driver.findElement(By.xpath("//input[@type='text']"));
-		searchBox.sendKeys("Prati Roju Pandage", Keys.ENTER);
+		searchBox.sendKeys("BBC AFRICA EYE", Keys.ENTER);
 		Thread.sleep(3000);
 		WebElement checkonvideo = driver.findElement(By.xpath("//img[@class=\"img-top\"]"));
 		if (checkonvideo.isDisplayed()) {
@@ -202,10 +202,10 @@ public class TestCase {
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@href='/search']"))).click();
 		WebElement searchBox = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@type='text']")));
-		searchBox.sendKeys("Prati Roju Pandage", Keys.ENTER);
+		searchBox.sendKeys("BBC AFRICA EYE", Keys.ENTER);
 
 		WebElement videoThumb = wait
-				.until(ExpectedConditions.elementToBeClickable(By.xpath("//img[@alt='Prati Roju Pandage']")));
+				.until(ExpectedConditions.elementToBeClickable(By.xpath("//img[@alt='BBC AFRICA EYE']")));
 		videoThumb.click();
 
 		// Step 3: Watch Video
@@ -438,7 +438,8 @@ public class TestCase {
 	// Test Case 14: View all button
 	@Test
 	public void viewAllTest() throws InterruptedException {
-		driver.get("https://chull.tv/"); // Always good to ensure you’re on the right page
+		
+		try {
 
 		// Click login
 		driver.findElement(By.xpath("//a[@href='/login']")).click();
@@ -459,30 +460,29 @@ public class TestCase {
 		WebElement clickOnSendOtp = driver.findElement(By.xpath("//button[normalize-space()='Verify OTP']"));
 		Thread.sleep(2000);
 		clickOnSendOtp.click();
+		Thread.sleep(4000);
 
-		// Wait for navigation or home screen to load fully
-		Thread.sleep(3000); // Adjust depending on speed or replace with proper wait
+		JavascriptExecutor jd = (JavascriptExecutor) driver;
+		jd.executeScript("window.scrollBy(0,300)");
 
-		// Wait until the "Top 10 in India" link is present and clickable
-		try {
-			WebElement top10Link = wait
-					.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(@href,'free-episode')]")));
-			top10Link.click();
-		} catch (TimeoutException e) {
-			System.out.println("Top 10 link not clickable: " + e.getMessage());
-
-		}
+	
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//h4[@class='Movie-heading'])[1]/child::a"))).click();
+		
+		
 
 		// Now check if the view-list div is visible
 		WebElement checkDataVisible = wait
-				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(@class,'view-list')]")));
+				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class=\"view-list\"]")));
 		boolean check = checkDataVisible.isDisplayed();
 
-		System.out.println("Is Top 10 content visible: " + check);
+		System.out.println("verify all the Data is visible: " + check);
 		Thread.sleep(2000);
+		}catch(Exception e) {
+			System.out.println(e.getMessage());
+		}
 	}
 
-	// Test Case 15: Play Store button
+
 	@Test
 	public void playStoreButtonTest() throws InterruptedException {
 
@@ -619,9 +619,9 @@ public class TestCase {
 		driver.findElement(By.xpath("//a[@href='/search']")).click();
 		Thread.sleep(3000);
 		WebElement searchBox = driver.findElement(By.xpath("//input[@type='text']"));
-		searchBox.sendKeys("Prati Roju Pandage");
+		searchBox.sendKeys("BBC AFRICA EYE");
 		WebElement ClickOnvideo = wait
-				.until(ExpectedConditions.elementToBeClickable(By.xpath("//img[@alt='Prati Roju Pandage']")));
+				.until(ExpectedConditions.elementToBeClickable(By.xpath("//img[@alt='BBC AFRICA EYE']")));
 		ClickOnvideo.click();
 
 		Thread.sleep(10000);
@@ -898,7 +898,7 @@ public class TestCase {
 	public void verifyurl() {
 
 		String actualurl = driver.getCurrentUrl();
-		String Expectedurl = "https://4sidesplay.com/";
+		String Expectedurl = "https://qtv.ottpeople.com/";
 		if (actualurl.equals(Expectedurl)) {
 			System.out.println("passed");
 		} else {

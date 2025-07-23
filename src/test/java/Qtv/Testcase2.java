@@ -3,6 +3,7 @@ package Qtv;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -212,9 +213,13 @@ public class Testcase2 extends TestCase {
 	@Test
 	public void clickwatchnow_userredirect_into_login() throws InterruptedException {
 		Thread.sleep(4000);
+		
+		JavascriptExecutor jse = (JavascriptExecutor) driver;
+		jse.executeScript("window.scrollBy(0,300)");
+		
 
 		WebElement clickonvideo = wait
-				.until(ExpectedConditions.elementToBeClickable(By.xpath("(//img[@class=\"img-top\"])[1]")));
+				.until(ExpectedConditions.elementToBeClickable(By.xpath("(//img[@class='img-top '])[1]")));
 		clickonvideo.click();
 
 		driver.findElement(By.xpath("//button[@class=\"sc-fUnMCh hzdSCt\"]")).click();
@@ -267,19 +272,19 @@ public class Testcase2 extends TestCase {
 			System.out.println(e.getMessage());
 		}
 	}
-	
+
 	@Test
 	public void checkAllanguageIsvisible() {
-		
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//img[@class=\"Movieslogo\"])[4]"))).click();
-	    List<WebElement> listOfLanguages = driver.findElements(By.xpath("//div[@class='card']"));
-	    
-	    System.out.println("Total languages found: " + listOfLanguages.size());
 
-	    for (int i = 0; i < listOfLanguages.size(); i++) {
-	        WebElement languageCard = listOfLanguages.get(i);
-	        String languageName = languageCard.getText(); // or use .findElement(...) if text is inside a child
-	        System.out.println("Language " + (i + 1) + ": " + languageName);
-	    }
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//img[@class=\"Movieslogo\"])[4]"))).click();
+		List<WebElement> listOfLanguages = driver.findElements(By.xpath("//div[@class='card']"));
+
+		System.out.println("Total languages found: " + listOfLanguages.size());
+
+		for (int i = 0; i < listOfLanguages.size(); i++) {
+			WebElement languageCard = listOfLanguages.get(i);
+			String languageName = languageCard.getText(); // or use .findElement(...) if text is inside a child
+			System.out.println("Language " + (i + 1) + ": " + languageName);
+		}
 	}
 }

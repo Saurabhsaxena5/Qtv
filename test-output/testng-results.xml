@@ -2,24 +2,24 @@
 <testng-results ignored="26" total="27" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-17T15:19:31 IST" name="Default suite" finished-at="2025-07-17T15:20:19 IST" duration-ms="48176">
+  <suite started-at="2025-07-23T18:14:25 IST" name="Default suite" finished-at="2025-07-23T18:14:45 IST" duration-ms="19776">
     <groups>
     </groups>
-    <test started-at="2025-07-17T15:19:31 IST" name="Default test" finished-at="2025-07-17T15:20:19 IST" duration-ms="48176">
-      <class name="Foursidesplay.TestCase">
-        <test-method is-config="true" signature="setup()[pri:0, instance:Foursidesplay.TestCase@41a0aa7d]" started-at="2025-07-17T15:19:31 IST" name="setup" finished-at="2025-07-17T15:19:35 IST" duration-ms="3770" status="PASS">
+    <test started-at="2025-07-23T18:14:25 IST" name="Default test" finished-at="2025-07-23T18:14:45 IST" duration-ms="19776">
+      <class name="Qtv.TestCase">
+        <test-method is-config="true" signature="setup()[pri:0, instance:Qtv.TestCase@41a0aa7d]" started-at="2025-07-23T18:14:25 IST" name="setup" finished-at="2025-07-23T18:14:29 IST" duration-ms="3519" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="checkRelatedvideo()[pri:0, instance:Foursidesplay.TestCase@41a0aa7d]" started-at="2025-07-17T15:19:35 IST" name="checkRelatedvideo" finished-at="2025-07-17T15:20:19 IST" duration-ms="43781" status="PASS">
+        <test-method signature="viewAllTest()[pri:0, instance:Qtv.TestCase@41a0aa7d]" started-at="2025-07-23T18:14:29 IST" name="viewAllTest" finished-at="2025-07-23T18:14:44 IST" duration-ms="15758" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- checkRelatedvideo -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:Foursidesplay.TestCase@41a0aa7d]" started-at="2025-07-17T15:20:19 IST" name="teardown" finished-at="2025-07-17T15:20:19 IST" duration-ms="561" status="PASS">
+        </test-method> <!-- viewAllTest -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:Qtv.TestCase@41a0aa7d]" started-at="2025-07-23T18:14:44 IST" name="teardown" finished-at="2025-07-23T18:14:45 IST" duration-ms="455" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- Foursidesplay.TestCase -->
+      </class> <!-- Qtv.TestCase -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="1" parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT" verbose="0">
+  <test thread-count="1" parallel="tests" name="Search Box Functionality(failed)" verbose="0">
+    <classes>
+      <class name="Qtv.TestCase">
+        <methods>
+          <include name="teardown"/>
+          <include name="searchVideoTest"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- Qtv.TestCase -->
+    </classes>
+  </test> <!-- Search Box Functionality(failed) -->
+  <test thread-count="1" parallel="tests" name="Play Video(failed)" verbose="0">
+    <classes>
+      <class name="Qtv.TestCase">
+        <methods>
+          <include name="teardown"/>
+          <include name="playVideoTest"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- Qtv.TestCase -->
+    </classes>
+  </test> <!-- Play Video(failed) -->
+  <test thread-count="1" parallel="tests" name="Check reltead video play or not(failed)" verbose="0">
+    <classes>
+      <class name="Qtv.TestCase">
+        <methods>
+          <include name="teardown"/>
+          <include name="checkRelatedvideo"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- Qtv.TestCase -->
+    </classes>
+  </test> <!-- Check reltead video play or not(failed) -->
+  <test thread-count="1" parallel="tests" name="verify that without login if user click on the watchnow so redirect into login(failed)" verbose="0">
+    <classes>
+      <class name="Qtv.Testcase2">
+        <methods>
+          <include name="clickwatchnow_userredirect_into_login"/>
+          <include name="teardown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- Qtv.Testcase2 -->
+    </classes>
+  </test> <!-- verify that without login if user click on the watchnow so redirect into login(failed) -->
+</suite> <!-- Failed suite [Suite] -->
